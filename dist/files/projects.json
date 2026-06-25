@@ -1,0 +1,226 @@
+[
+   {
+      "id": 1,
+      "category": "oil",
+      "coords": [
+         60.0395,
+         69.6945
+      ],
+      "title": "Тобольский нефтехимический комплекс",
+      "industry": "Нефть и нефтехимия",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 2,
+      "category": "oil",
+      "coords": [
+         56.3269,
+         44.0059
+      ],
+      "title": "Нефтеперерабатывающий завод",
+      "industry": "Нефть и нефтехимия",
+      "images": [
+         "img/projects/project-4.avif",
+         "img/projects/project-5.avif",
+         "img/projects/project-6.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 3,
+      "category": "gas",
+      "coords": [
+         71.2808,
+         72.0650
+      ],
+      "title": "Ямал СПГ",
+      "industry": "Газовая инфраструктура и СПГ",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 4,
+      "category": "gas",
+      "coords": [
+         66.0833,
+         76.6333
+      ],
+      "title": "Газоконденсатное месторождение",
+      "industry": "Газовая инфраструктура и СПГ",
+      "images": [
+         "img/projects/project-4.avif",
+         "img/projects/project-5.avif",
+         "img/projects/project-6.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 5,
+      "category": "energy",
+      "coords": [
+         55.7558,
+         37.6176
+      ],
+      "title": "Энергетический комплекс",
+      "industry": "Энергетика",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 6,
+      "category": "energy",
+      "coords": [
+         59.9311,
+         30.3609
+      ],
+      "title": "Теплоэлектростанция",
+      "industry": "Энергетика",
+      "images": [
+         "img/projects/project-4.avif",
+         "img/projects/project-5.avif",
+         "img/projects/project-6.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 7,
+      "category": "industry",
+      "coords": [
+         55.0084,
+         82.9357
+      ],
+      "title": "Металлургический завод",
+      "industry": "Промышленное производство",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 8,
+      "category": "industry",
+      "coords": [
+         56.8389,
+         60.6057
+      ],
+      "title": "Машиностроительный комплекс",
+      "industry": "Промышленное производство",
+      "images": [
+         "img/projects/project-4.avif",
+         "img/projects/project-5.avif",
+         "img/projects/project-6.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 9,
+      "category": "agriculture",
+      "coords": [
+         45.0355,
+         38.9753
+      ],
+      "title": "Агропромышленный кластер",
+      "industry": "Сельское хозяйство",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 10,
+      "category": "agriculture",
+      "coords": [
+         51.5336,
+         46.0343
+      ],
+      "title": "Зерновой терминал",
+      "industry": "Сельское хозяйство",
+      "images": [
+         "img/projects/project-4.avif",
+         "img/projects/project-5.avif",
+         "img/projects/project-6.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 11,
+      "category": "mining",
+      "coords": [
+         69.3558,
+         88.1893
+      ],
+      "title": "Горно-обогатительный комбинат",
+      "industry": "Горнодобывающая промышленность",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 12,
+      "category": "mining",
+      "coords": [
+         53.1959,
+         50.1008
+      ],
+      "title": "Карьер по добыче полезных ископаемых",
+      "industry": "Горнодобывающая промышленность",
+      "images": [
+         "img/projects/project-4.avif",
+         "img/projects/project-5.avif",
+         "img/projects/project-6.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 13,
+      "category": "logistics",
+      "coords": [
+         59.9343,
+         30.3351
+      ],
+      "title": "Морской грузовой терминал",
+      "industry": "Логистика и портовая инфраструктура",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 14,
+      "category": "logistics",
+      "coords": [
+         43.5855,
+         39.7231
+      ],
+      "title": "Логистический хаб",
+      "industry": "Логистика и портовая инфраструктура",
+      "images": [
+         "img/projects/project-4.avif",
+         "img/projects/project-5.avif",
+         "img/projects/project-6.avif"
+      ],
+      "link": "#"
+   }
+]
