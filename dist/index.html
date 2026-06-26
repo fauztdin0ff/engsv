@@ -19,9 +19,8 @@
    <title>ENGSV</title>
    <meta name="description"
       content="Мы обеспечиваем комплексный контроль качества процессов, продукции и поставок в России и за рубежом">
-   <meta name="keywords" content="ключевое слово 1, ключевое слово 2">
    <meta name="robots" content="index, follow">
-   <meta name="author" content="Название компании">
+   <meta name="author" content="ENGSV company">
 
    <!-- Canonical -->
    <link rel="canonical" href="https://example.com/">
@@ -32,7 +31,7 @@
       content="Мы обеспечиваем комплексный контроль качества процессов, продукции и поставок в России и за рубежом">
    <meta property="og:url" content="https://example.com/">
    <meta property="og:type" content="website">
-   <meta property="og:site_name" content="Название сайта">
+   <meta property="og:site_name" content="ENGSV">
    <meta property="og:locale" content="ru_RU">
    <meta property="og:image" content="img/fav/og-image.jpg">
    <meta property="og:image:width" content="1200">
@@ -46,9 +45,9 @@
    <meta name="twitter:image" content="img/fav/og-image.jpg">
 
    <!-- Styles -->
-   <link rel="stylesheet" href="css/splide.min.css?_v=20260626163143">
-   <link rel="stylesheet" href="css/glightbox.min.css?_v=20260626163143">
-   <link rel="stylesheet" href="css/style.min.css?_v=20260626163143">
+   <link rel="stylesheet" href="css/splide.min.css?_v=20260626165605">
+   <link rel="stylesheet" href="css/glightbox.min.css?_v=20260626165605">
+   <link rel="stylesheet" href="css/style.min.css?_v=20260626165605">
 </head>
 
 <body>
@@ -333,14 +332,14 @@
       <main>
          <section class="hero">
             <div class="hero__videos">
-               <video class="hero__video active" muted playsinline autoplay>
+               <video class="hero__video active" muted playsinline preload="auto">
                   <source src="files/video-1.mp4" type="video/mp4">
                </video>
-               <video class="hero__video" muted playsinline>
-                  <source src="files/video-2.mp4" type="video/mp4">
+               <video class="hero__video" muted playsinline preload="none">
+                  <source data-src="files/video-2.mp4" type="video/mp4">
                </video>
-               <video class="hero__video" muted playsinline>
-                  <source src="files/video-3.mp4" type="video/mp4">
+               <video class="hero__video" muted playsinline preload="none">
+                  <source data-src="files/video-3.mp4" type="video/mp4">
                </video>
             </div>
 
@@ -414,13 +413,14 @@
                <div class="activities__content">
                   <div class="activities__images fade-up">
                      <div class="activities__images-wrapper">
-                        <video src="files/logo-vid.mp4" muted autoplay playsinline loop data-image="0"></video>
-                        <img src="img/serv-1.avif" width="730" height="590" alt="image" data-image="1">
-                        <img src="img/serv-2.avif" width="730" height="590" alt="image" data-image="2">
-                        <img src="img/serv-1.avif" width="730" height="590" alt="image" data-image="3">
-                        <img src="img/serv-4.avif" width="730" height="590" alt="image" data-image="4">
-                        <img src="img/serv-5.avif" width="730" height="590" alt="image" data-image="5">
-                        <img src="img/serv-6.avif" width="730" height="590" alt="image" data-image="6">
+                        <video src="files/logo-vid.mp4" muted autoplay playsinline loop preload="none"
+                           data-image="0"></video>
+                        <img src="img/serv-1.avif" width="730" height="590" alt="image" loading="lazy" data-image="1">
+                        <img src="img/serv-2.avif" width="730" height="590" alt="image" loading="lazy" data-image="2">
+                        <img src="img/serv-1.avif" width="730" height="590" alt="image" loading="lazy" data-image="3">
+                        <img src="img/serv-4.avif" width="730" height="590" alt="image" loading="lazy" data-image="4">
+                        <img src="img/serv-5.avif" width="730" height="590" alt="image" loading="lazy" data-image="5">
+                        <img src="img/serv-6.avif" width="730" height="590" alt="image" loading="lazy" data-image="6">
                      </div>
                   </div>
                   <div class="activities__main">
@@ -2150,8 +2150,8 @@
 </div>
    
 
-   <script src="js/app.js?_v=20260626163143"></script>
-   <script src="js/map.js?_v=20260626163143"></script>
+   <script src="js/app.js?_v=20260626165605"></script>
+   <script src="js/map.js?_v=20260626165605"></script>
 </body>
 
 </html>

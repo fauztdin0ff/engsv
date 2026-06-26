@@ -5083,7 +5083,7 @@ function initPreloader() {
                once: true
             });
 
-         }, 4100);
+         }, 3000);
 
       };
 
@@ -5098,6 +5098,7 @@ function initPreloader() {
    });
 }
 
+
 /*==========================================================================
 HERO VIDEOS
 ============================================================================*/
@@ -5107,7 +5108,18 @@ function initHeroVideos() {
 
    let current = 0;
 
-   videos[current].play();
+   function loadVideo(video) {
+      const source = video.querySelector("source");
+
+      if (!source.src) {
+         source.src = source.dataset.src;
+         video.load();
+      }
+   }
+
+   videos[current].play().catch(() => { });
+
+   loadVideo(videos[(current + 1) % videos.length]);
 
    videos.forEach((video, index) => {
       video.addEventListener("ended", () => {
@@ -5117,7 +5129,9 @@ function initHeroVideos() {
 
          videos[current].currentTime = 0;
          videos[current].classList.add("active");
-         videos[current].play();
+         videos[current].play().catch(() => { });
+
+         loadVideo(videos[(current + 1) % videos.length]);
       });
    });
 }
