@@ -5422,6 +5422,7 @@ function bindSplideProgress(slider, barEl) {
    update();
 }
 
+
 /*==========================================================================
 Activities slider
 ============================================================================*/
@@ -5640,6 +5641,44 @@ function initindustrySlider({
       });
    }
 
+   let isScrolling = false;
+
+   wrapper.addEventListener(
+      'wheel',
+      (e) => {
+         if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) return;
+
+         e.preventDefault();
+
+         if (isScrolling || isAnimating) return;
+
+         isScrolling = true;
+
+         if (e.deltaX > 0) {
+            let newIndex = activeIndex + 1;
+
+            if (newIndex > items.length - 1) {
+               newIndex = 0;
+            }
+
+            layout(newIndex);
+         } else {
+            let newIndex = activeIndex - 1;
+
+            if (newIndex < 0) {
+               newIndex = items.length - 1;
+            }
+
+            layout(newIndex);
+         }
+
+         setTimeout(() => {
+            isScrolling = false;
+         }, 1000);
+      },
+      { passive: false }
+   );
+
    return {
       goTo: layout,
       getActive: () => activeIndex
@@ -5777,7 +5816,6 @@ function initProjectsSlider() {
       const end = splide.Components.Controller.getEnd();
       const disabled = end === 0;
 
-      // Когда листать вообще нельзя
       prevBtn?.classList.toggle('disabled', disabled);
       nextBtn?.classList.toggle('disabled', disabled);
 
@@ -5787,7 +5825,6 @@ function initProjectsSlider() {
          return;
       }
 
-      // Когда достигнуты края
       prevBtn?.classList.toggle('blocked', splide.index === 0);
       nextBtn?.classList.toggle('blocked', splide.index >= end);
    }
@@ -5813,7 +5850,50 @@ function initProjectsSlider() {
    });
 
    splide.mount();
+
+   const slides = el.querySelectorAll('.splide__slide');
+
+   slides.forEach((slide, index) => {
+      slide.addEventListener('click', () => {
+         if (index === splide.index) return;
+
+         if (index > splide.index) {
+            splide.go('>');
+         } else {
+            splide.go('<');
+         }
+      });
+   });
+
+   const track = el.querySelector('.splide__track');
+
+   let isScrolling = false;
+
+   track.addEventListener(
+      'wheel',
+      (e) => {
+         if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) return;
+
+         e.preventDefault();
+
+         if (isScrolling) return;
+         isScrolling = true;
+
+         if (e.deltaX > 0) {
+            splide.go('>');
+         } else {
+            splide.go('<');
+         }
+
+         setTimeout(() => {
+            isScrolling = false;
+         }, splide.options.speed);
+      },
+      { passive: false }
+   );
 }
+
+
 /*==========================================================================
 Partners slider
 ============================================================================*/
@@ -6111,15 +6191,40 @@ function initUpload() {
 }
 
 
+/*==========================================================================
+Animations
+============================================================================*/
+function initFadeAnimations() {
+   const elements = document.querySelectorAll(
+      ".fade-up, .fade-down, .fade-left, .fade-right"
+   );
+
+   if (!elements.length) return;
+
+   const observer = new IntersectionObserver(
+      (entries, observer) => {
+         entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            entry.target.classList.add("fade-show");
+            observer.unobserve(entry.target);
+         });
+      },
+      {
+         threshold: 0.15,
+         rootMargin: "0px 0px -10% 0px",
+      }
+   );
+
+   elements.forEach((el) => observer.observe(el));
+}
+
 /* =========================
 INIT
 ========================= */
 document.addEventListener("DOMContentLoaded", async () => {
-
    await initPreloader();
-
    initHeroAnimations()
-
    initHeroVideos();
    initLangMod();
    burgerMenu();
@@ -6133,6 +6238,7 @@ document.addEventListener("DOMContentLoaded", async () => {
    initIndustryMobSlider();
    initPartnersSlider();
    initUpload();
+   initFadeAnimations();
 });
 })();
 
