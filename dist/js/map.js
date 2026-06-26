@@ -119,7 +119,7 @@ async function initMap() {
          {},
          {
             iconLayout: 'default#image',
-            iconImageHref: '../img/icons/map-marker.svg',
+            iconImageHref: './img/icons/map-marker.svg',
             iconImageSize: [40, 40],
             iconImageOffset: [-20, -20]
          }
