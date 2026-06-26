@@ -143,7 +143,7 @@ function initPopups() {
    function openPopup(popup, button) {
       popup.classList.add(ACTIVE_CLASS);
       document.body.classList.add(BODY_ACTIVE_CLASS);
-
+      window.lenis?.stop();
       if (button) {
          button.classList.add("active");
          activeButton = button;
@@ -153,7 +153,7 @@ function initPopups() {
    function closePopup(popup) {
       popup.classList.remove(ACTIVE_CLASS);
       document.body.classList.remove(BODY_ACTIVE_CLASS);
-
+      window.lenis?.start();
       if (activeButton) {
          activeButton.classList.remove("active");
          activeButton = null;
@@ -5127,18 +5127,33 @@ function initHeroVideos() {
 LANG MOD
 ============================================================================*/
 function initLangMod() {
-   const mod = document.querySelector(".lang-mod");
-   const btn = document.querySelector(".lang-mod__button");
+   const mods = document.querySelectorAll(".lang-mod");
 
-   if (!mod || !btn) return;
+   if (!mods.length) return;
 
-   btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      mod.classList.toggle("active");
+   mods.forEach((mod) => {
+      const btn = mod.querySelector(".lang-mod__button");
+
+      if (!btn) return;
+
+      btn.addEventListener("click", (e) => {
+         e.preventDefault();
+         e.stopPropagation();
+
+         mods.forEach((item) => {
+            if (item !== mod) item.classList.remove("active");
+         });
+
+         mod.classList.toggle("active");
+      });
    });
 
    document.addEventListener("click", (e) => {
-      if (!mod.contains(e.target)) mod.classList.remove("active");
+      mods.forEach((mod) => {
+         if (!mod.contains(e.target)) {
+            mod.classList.remove("active");
+         }
+      });
    });
 }
 
@@ -5667,18 +5682,38 @@ function initIndustryMobSlider() {
                },
             });
 
+            function updateFraction() {
+               if (!fraction) return;
+
+               fraction.textContent = format(splide.index + 1);
+            }
+
+            function updateButtons() {
+               const end = splide.Components.Controller.getEnd();
+               const disabled = end === 0;
+
+               prevBtn?.classList.toggle('disabled', disabled);
+               nextBtn?.classList.toggle('disabled', disabled);
+
+               if (disabled) {
+                  prevBtn?.classList.remove('blocked');
+                  nextBtn?.classList.remove('blocked');
+                  return;
+               }
+
+               prevBtn?.classList.toggle('blocked', splide.index === 0);
+               nextBtn?.classList.toggle('blocked', splide.index >= end);
+            }
+
+            splide.on('mounted move resized updated refresh', () => {
+               updateFraction();
+               updateButtons();
+            });
+
             splide.mount();
 
             prevBtn?.addEventListener('click', () => splide.go('<'));
             nextBtn?.addEventListener('click', () => splide.go('>'));
-
-            const updateFraction = () => {
-               const current = splide.index + 1;
-               fraction.textContent = `${format(current)}`;
-            };
-
-            splide.on('mounted move', updateFraction);
-            updateFraction();
          }
       } else {
          if (splide) {
@@ -5688,6 +5723,9 @@ function initIndustryMobSlider() {
             if (fraction) {
                fraction.textContent = '';
             }
+
+            prevBtn?.classList.remove('disabled', 'blocked');
+            nextBtn?.classList.remove('disabled', 'blocked');
          }
       }
    }
@@ -5695,7 +5733,6 @@ function initIndustryMobSlider() {
    check();
    window.addEventListener('resize', check);
 }
-
 
 /*==========================================================================
 Projects slider
@@ -5737,10 +5774,22 @@ function initProjectsSlider() {
    }
 
    function updateButtons() {
-      const disabled = splide.Components.Controller.getEnd() === 0;
+      const end = splide.Components.Controller.getEnd();
+      const disabled = end === 0;
 
+      // Когда листать вообще нельзя
       prevBtn?.classList.toggle('disabled', disabled);
       nextBtn?.classList.toggle('disabled', disabled);
+
+      if (disabled) {
+         prevBtn?.classList.remove('blocked');
+         nextBtn?.classList.remove('blocked');
+         return;
+      }
+
+      // Когда достигнуты края
+      prevBtn?.classList.toggle('blocked', splide.index === 0);
+      nextBtn?.classList.toggle('blocked', splide.index >= end);
    }
 
    function updateFraction() {
@@ -5758,12 +5807,13 @@ function initProjectsSlider() {
       nextBtn.addEventListener('click', () => splide.go('>'));
    }
 
-   splide.on('mounted move', updateFraction);
-   splide.on('mounted resized updated refresh', updateButtons);
+   splide.on('mounted move resized updated refresh', () => {
+      updateButtons();
+      updateFraction();
+   });
 
    splide.mount();
 }
-
 /*==========================================================================
 Partners slider
 ============================================================================*/
@@ -5779,6 +5829,7 @@ function initPartnersSlider() {
          if (!splide) {
             splide = new _splidejs_splide__WEBPACK_IMPORTED_MODULE_1__["default"](root, {
                perPage: 4,
+               perMove: 1,
                gap: '20px',
                pagination: false,
                arrows: false,
@@ -5802,16 +5853,41 @@ function initPartnersSlider() {
                },
             });
 
-            splide.mount();
-
             const prevBtn = document.querySelector('.partners__nav-prev');
             const nextBtn = document.querySelector('.partners__nav-next');
+
+            function updateButtons() {
+               const end = splide.Components.Controller.getEnd();
+               const disabled = end === 0;
+
+               prevBtn?.classList.toggle('disabled', disabled);
+               nextBtn?.classList.toggle('disabled', disabled);
+
+               if (disabled) {
+                  prevBtn?.classList.remove('blocked');
+                  nextBtn?.classList.remove('blocked');
+                  return;
+               }
+
+               prevBtn?.classList.toggle('blocked', splide.index === 0);
+               nextBtn?.classList.toggle('blocked', splide.index >= end);
+            }
+
+            splide.on('mounted move resized updated refresh', updateButtons);
+
+            splide.mount();
 
             prevBtn?.addEventListener('click', () => splide.go('<'));
             nextBtn?.addEventListener('click', () => splide.go('>'));
          }
       } else {
          if (splide) {
+            const prevBtn = document.querySelector('.partners__nav-prev');
+            const nextBtn = document.querySelector('.partners__nav-next');
+
+            prevBtn?.classList.remove('disabled', 'blocked');
+            nextBtn?.classList.remove('disabled', 'blocked');
+
             splide.destroy(true);
             splide = null;
          }
@@ -5842,10 +5918,10 @@ function initArticlesSlider() {
          2099: {
             perPage: 3,
          },
-         1200: {
+         1300: {
             perPage: 2,
          },
-         768: {
+         767: {
             perPage: 1,
          },
       },
@@ -5855,10 +5931,20 @@ function initArticlesSlider() {
    const nextBtn = document.querySelector('.articles__nav-next');
 
    function updateButtons() {
-      const disabled = splide.Components.Controller.getEnd() === 0;
+      const end = splide.Components.Controller.getEnd();
+      const disabled = end === 0;
 
       prevBtn?.classList.toggle('disabled', disabled);
       nextBtn?.classList.toggle('disabled', disabled);
+
+      if (disabled) {
+         prevBtn?.classList.remove('blocked');
+         nextBtn?.classList.remove('blocked');
+         return;
+      }
+
+      prevBtn?.classList.toggle('blocked', splide.index === 0);
+      nextBtn?.classList.toggle('blocked', splide.index >= end);
    }
 
    if (prevBtn && nextBtn) {
@@ -5866,13 +5952,12 @@ function initArticlesSlider() {
       nextBtn.addEventListener('click', () => splide.go('>'));
    }
 
-   splide.on('mounted resized updated refresh', updateButtons);
+   splide.on('mounted move resized updated refresh', updateButtons);
 
    splide.mount();
 
    return splide;
 }
-
 
 /*==========================================================================
 Vacancies
@@ -5924,6 +6009,108 @@ window.lightbox = glightbox__WEBPACK_IMPORTED_MODULE_2__({
    selector: '.glightbox'
 });
 
+
+/*==========================================================================
+Upload area
+============================================================================*/
+function initUpload() {
+   const upload = document.querySelector('.upload');
+
+   if (!upload) return;
+
+   const input = upload.querySelector('.upload__input');
+   const text = upload.querySelector('.upload__text');
+   const error = upload.closest('.callback__form-area').querySelector('.upload__error');
+
+   const defaultText = text.innerHTML;
+
+   const MAX_SIZE = 10 * 1024 * 1024; // 10 МБ
+
+   const allowedExtensions = ['pdf', 'doc', 'docx'];
+   const allowedMimeTypes = [
+      'application/pdf',
+      'application/msword',
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+   ];
+
+   function clearError() {
+      error.textContent = '';
+      upload.classList.remove('error');
+   }
+
+   function showError(message) {
+      error.textContent = message;
+      upload.classList.add('error');
+   }
+
+   function resetUpload() {
+      input.value = '';
+      text.innerHTML = defaultText;
+   }
+
+   function validateFile(file) {
+      clearError();
+
+      if (!file) {
+         resetUpload();
+         return false;
+      }
+
+      const extension = file.name.split('.').pop().toLowerCase();
+
+      // Проверка формата
+      if (
+         !allowedExtensions.includes(extension) ||
+         (file.type && !allowedMimeTypes.includes(file.type))
+      ) {
+         showError('Допустимы только файлы PDF, DOC и DOCX.');
+         resetUpload();
+         return false;
+      }
+
+      // Проверка размера
+      if (file.size > MAX_SIZE) {
+         showError('Максимальный размер файла — 10 МБ.');
+         resetUpload();
+         return false;
+      }
+
+      text.innerHTML = `<i>${file.name}</i>`;
+
+      return true;
+   }
+
+   // Выбор через диалог
+   input.addEventListener('change', () => {
+      validateFile(input.files[0]);
+   });
+
+   // Drag & Drop
+   ['dragenter', 'dragover'].forEach(eventName => {
+      upload.addEventListener(eventName, e => {
+         e.preventDefault();
+         upload.classList.add('dragover');
+      });
+   });
+
+   ['dragleave', 'dragend', 'drop'].forEach(eventName => {
+      upload.addEventListener(eventName, e => {
+         e.preventDefault();
+         upload.classList.remove('dragover');
+      });
+   });
+
+   upload.addEventListener('drop', e => {
+      const files = e.dataTransfer.files;
+
+      if (!files.length) return;
+
+      input.files = files;
+      validateFile(files[0]);
+   });
+}
+
+
 /* =========================
 INIT
 ========================= */
@@ -5944,7 +6131,8 @@ document.addEventListener("DOMContentLoaded", async () => {
    initVacanciesAccordion();
    initActivitiesSlider();
    initIndustryMobSlider();
-   initPartnersSlider()
+   initPartnersSlider();
+   initUpload();
 });
 })();
 
