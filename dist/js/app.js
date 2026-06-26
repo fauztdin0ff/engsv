@@ -5456,7 +5456,7 @@ function initActivitiesSlider() {
                gap: '10px',
                pagination: false,
                arrows: false,
-               speed: 600,
+               speed: 800,
             });
 
             splide.mount();
@@ -5725,7 +5725,7 @@ function initIndustryMobSlider() {
                gap: '20px',
                pagination: false,
                arrows: false,
-               speed: 600,
+               speed: 800,
                breakpoints: {
                   767: {
                      perPage: 1,
@@ -5927,7 +5927,7 @@ function initPartnersSlider() {
                gap: '20px',
                pagination: false,
                arrows: false,
-               speed: 600,
+               speed: 800,
 
                classes: {
                   prev: 'partners__nav-prev',
