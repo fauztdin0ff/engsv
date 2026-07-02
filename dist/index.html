@@ -45,9 +45,9 @@
    <meta name="twitter:image" content="img/fav/og-image.jpg">
 
    <!-- Styles -->
-   <link rel="stylesheet" href="css/splide.min.css?_v=20260629180308">
-   <link rel="stylesheet" href="css/glightbox.min.css?_v=20260629180308">
-   <link rel="stylesheet" href="css/style.min.css?_v=20260629180308">
+   <link rel="stylesheet" href="css/splide.min.css?_v=20260702162100">
+   <link rel="stylesheet" href="css/glightbox.min.css?_v=20260702162100">
+   <link rel="stylesheet" href="css/style.min.css?_v=20260702162100">
 </head>
 
 <body>
@@ -118,7 +118,7 @@
                <div class="lang-mod__menu">
                   <ul class="lang-mod__menu-list">
                      <li class="lang-mod__menu-item">
-                        <a href="" class="lang-mod__menu-link">English</a>
+                        <a href="" class="lang-mod__menu-link">EN</a>
                      </li>
                   </ul>
                </div>
@@ -310,7 +310,7 @@
                <div class="lang-mod__menu">
                   <ul class="lang-mod__menu-list">
                      <li class="lang-mod__menu-item">
-                        <a href="" class="lang-mod__menu-link">English</a>
+                        <a href="" class="lang-mod__menu-link">EN</a>
                      </li>
                   </ul>
                </div>
@@ -351,7 +351,8 @@
                   в России и за рубежом
                </div>
                <div class="hero__buttons">
-                  <button type="button" class="hero__button btn">Обсудить проект</button>
+                  <button type="button" class="hero__button btn open-popup" data-popup="request-popup">Обсудить
+                     проект</button>
                   <button type="button" class="hero__button btn -outline">Наши услуги</button>
                </div>
             </div>
@@ -418,7 +419,7 @@
                            data-image="0"></video>
                         <img src="img/serv-1.avif" width="730" height="590" alt="image" loading="lazy" data-image="1">
                         <img src="img/serv-2.avif" width="730" height="590" alt="image" loading="lazy" data-image="2">
-                        <img src="img/serv-1.avif" width="730" height="590" alt="image" loading="lazy" data-image="3">
+                        <img src="img/serv-3.avif" width="730" height="590" alt="image" loading="lazy" data-image="3">
                         <img src="img/serv-4.avif" width="730" height="590" alt="image" loading="lazy" data-image="4">
                         <img src="img/serv-5.avif" width="730" height="590" alt="image" loading="lazy" data-image="5">
                         <img src="img/serv-6.avif" width="730" height="590" alt="image" loading="lazy" data-image="6">
@@ -2128,7 +2129,57 @@
    </div>
 </footer>
    </div>
-   <!-- popup-->
+   <!-- consultation popup -->
+<div id="request-popup" class="request-popup popup" role="dialog" aria-modal="true" data-lenis-prevent>
+   <div class="request-popup__body popup__body">
+      <div class="request-popup__wrapper">
+         <div class="popup__title">
+            Обсудим ваш проект
+         </div>
+         <div class="popup__subtitle">
+            Получите консультацию наших экспертов
+         </div>
+         <div class="popup__content">
+            <form class="callback__form">
+               <div class="callback__form-row">
+                  <div class="callback__form-area">
+                     <input type="text" name="name" class="input" autocomplete="name" placeholder="Имя*" required>
+                  </div>
+                  <div class="callback__form-area">
+                     <input type="email" name="email" class="input" autocomplete="email" placeholder="Email*" required>
+                  </div>
+               </div>
+               <div class="callback__form-row">
+                  <div class="callback__form-area">
+                     <input type="text" name="tel" class="input tel-mask" autocomplete="tel" placeholder="Телефон*"
+                        required>
+                  </div>
+                  <div class="callback__form-area">
+                     <input type="text" name="company" class="input" placeholder="Компания">
+                  </div>
+               </div>
+               <div class="callback__form-row">
+                  <div class="callback__form-area">
+                     <textarea name="message" class="textarea" placeholder="Сообщение"></textarea>
+                  </div>
+               </div>
+               <div class="callback__actions">
+                  <div class="callback__submit">
+                     <button type="submit" class="btn">Отправить</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+   <button type="button" class="popup__close" aria-label="Закрыть попап">
+      <svg>
+         <use xlink:href="img/icons/icons.svg#icon-close"></use>
+      </svg>
+   </button>
+</div>
+
+<!-- vacancy popup -->
 <div id="vacancy-popup" class="vacancy-popup popup" role="dialog" aria-modal="true" data-lenis-prevent>
    <div class="vacancy-popup__body popup__body">
       <div class="vacancy-popup__wrapper">
@@ -2189,10 +2240,32 @@
       </svg>
    </button>
 </div>
+
+<!-- thanks popup -->
+<div id="thanks-popup" class="thanks-popup popup" role="dialog" aria-modal="true" data-lenis-prevent>
+   <div class="thanks-popup__body popup__body">
+      <div class="thanks-popup__wrapper">
+         <div class="thanks-popup__title">
+            Спасибо!
+         </div>
+         <div class="thanks-popup__subtitle">
+            Совсем скоро мы свяжемся с вами
+         </div>
+         <div class="thanks-popup__button">
+            <button type="button" class="btn popup__close">Ок</button>
+         </div>
+      </div>
+   </div>
+   <button type="button" class="popup__close" aria-label="Закрыть попап">
+      <svg>
+         <use xlink:href="img/icons/icons.svg#icon-close"></use>
+      </svg>
+   </button>
+</div>
    
 
-   <script src="js/app.js?_v=20260629180308"></script>
-   <script src="js/map.js?_v=20260629180308"></script>
+   <script src="js/app.js?_v=20260702162100"></script>
+   <script src="js/map.js?_v=20260702162100"></script>
 </body>
 
 </html>
