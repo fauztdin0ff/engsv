@@ -58,7 +58,6 @@ async function initMap() {
 
    const projects = await fetch('./files/projects.json')
       .then(response => response.json());
-
    await ymaps.ready();
 
    const popup = document.querySelector('.geo__popup');
@@ -66,38 +65,39 @@ async function initMap() {
    const popupCategory = document.querySelector('.geo__popup-category');
    const popupGallery = document.querySelector('.geo__popup-gallery');
    const popupButton = document.querySelector('.geo__popup-button');
+   const filtersContainer = document.querySelector('.geo__filters');
 
    function openPopup(project) {
 
       popupTitle.textContent = project.title;
+      popupCategory.textContent = `Отрасль: ${project.category}`;
 
-      popupCategory.textContent =
-         `Отрасль: ${project.industry}`;
-
+      /*
       popupButton.href = project.link;
-
+   
       popupGallery.innerHTML = '';
-
-      project.images.forEach((src, index) => {
-
+   
+      project.images.forEach(src => {
+   
          popupGallery.insertAdjacentHTML(
             'beforeend',
             `
-         <a href="${src}"
-            class="geo__popup-image geo-lightbox"
-            data-gallery="project-${project.id || project.title}">
-            <img src="${src}" alt="" loading="lazy">
-         </a>
-         `
+            <a href="${src}"
+               class="geo__popup-image geo-lightbox"
+               data-gallery="project-${project.id}">
+               <img src="${src}" alt="" loading="lazy">
+            </a>
+            `
          );
-
+   
       });
-
+   
       popupLightbox?.destroy();
-
-      popupLightbox = window.GLightbox({
+   
+      popupLightbox = GLightbox({
          selector: '.geo-lightbox'
       });
+      */
 
       popup.classList.add('show');
    }
@@ -153,15 +153,44 @@ async function initMap() {
       popup.classList.remove('show');
    });
 
-   const filterButtons = document.querySelectorAll('.geo__filter');
+   // =========================================================================
+   // Создание фильтров
+   // =========================================================================
+
+   const categories = [...new Set(projects.map(project => project.category))];
+
+   filtersContainer.innerHTML = `
+      <button
+         type="button"
+         class="geo__filter active"
+         data-category="all">
+         Все проекты
+      </button>
+   `;
+
+   categories.forEach(category => {
+
+      filtersContainer.insertAdjacentHTML(
+         'beforeend',
+         `
+         <button
+            type="button"
+            class="geo__filter"
+            data-category="${category}">
+            ${category}
+         </button>
+         `
+      );
+
+   });
+
+   const filterButtons = filtersContainer.querySelectorAll('.geo__filter');
 
    filterButtons.forEach(button => {
 
       button.addEventListener('click', () => {
 
-         filterButtons.forEach(btn => {
-            btn.classList.remove('active');
-         });
+         filterButtons.forEach(btn => btn.classList.remove('active'));
 
          button.classList.add('active');
 

@@ -1,13 +1,12 @@
 [
    {
       "id": 1,
-      "category": "oil",
+      "category": "Нефтегаз и нефтехимия",
       "coords": [
-         60.0395,
-         69.6945
+         54.935,
+         73.395
       ],
-      "title": "Тобольский нефтехимический комплекс",
-      "industry": "Нефть и нефтехимия",
+      "title": "Строительство установки замедленного коксования на Омском НПЗ",
       "images": [
          "img/projects/project-1.avif",
          "img/projects/project-2.avif",
@@ -17,29 +16,27 @@
    },
    {
       "id": 2,
-      "category": "oil",
+      "category": "Газовая инфраструктура и СПГ",
       "coords": [
-         56.3269,
-         44.0059
+         51.517,
+         128.133
       ],
-      "title": "Нефтеперерабатывающий завод",
-      "industry": "Нефть и нефтехимия",
+      "title": "Строительство Амурского Газоперерабатывающего Завода",
       "images": [
-         "img/projects/project-4.avif",
-         "img/projects/project-5.avif",
-         "img/projects/project-6.avif"
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
       ],
       "link": "#"
    },
    {
       "id": 3,
-      "category": "gas",
+      "category": "Нефтегаз и нефтехимия",
       "coords": [
-         71.2808,
-         72.0650
+         55.638,
+         37.806
       ],
-      "title": "Ямал СПГ",
-      "industry": "Газовая инфраструктура и СПГ",
+      "title": "Строительство комбинированной установки переработки нефти \"ЕВРО+\" на Московском НПЗ",
       "images": [
          "img/projects/project-1.avif",
          "img/projects/project-2.avif",
@@ -49,29 +46,27 @@
    },
    {
       "id": 4,
-      "category": "gas",
+      "category": "Агропромышленный сектор",
       "coords": [
-         66.0833,
-         76.6333
+         53.515,
+         49.41
       ],
-      "title": "Газоконденсатное месторождение",
-      "industry": "Газовая инфраструктура и СПГ",
+      "title": "Строительство производства гранулированного карбамида (\"Волгаферт\") в г. Тольятти",
       "images": [
-         "img/projects/project-4.avif",
-         "img/projects/project-5.avif",
-         "img/projects/project-6.avif"
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
       ],
       "link": "#"
    },
    {
       "id": 5,
-      "category": "energy",
+      "category": "Нефтегаз и нефтехимия",
       "coords": [
-         55.7558,
-         37.6176
+         56.107,
+         44.155
       ],
-      "title": "Энергетический комплекс",
-      "industry": "Энергетика",
+      "title": "Строительство установок по гидроочистке дизельного топлива, производству водорода, получению серы, адсорбции при переменном давлении и газофракционированию на Кстовском НПЗ",
       "images": [
          "img/projects/project-1.avif",
          "img/projects/project-2.avif",
@@ -81,29 +76,27 @@
    },
    {
       "id": 6,
-      "category": "energy",
+      "category": "Газовая инфраструктура и СПГ",
       "coords": [
-         59.9311,
-         30.3609
+         46.578,
+         142.925
       ],
-      "title": "Теплоэлектростанция",
-      "industry": "Энергетика",
+      "title": "Строительство производства сжиженного природного газа (СПГ) на Сахалине (\"Сахалин-2\")",
       "images": [
-         "img/projects/project-4.avif",
-         "img/projects/project-5.avif",
-         "img/projects/project-6.avif"
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
       ],
       "link": "#"
    },
    {
       "id": 7,
-      "category": "industry",
+      "category": "Агропромышленный сектор",
       "coords": [
-         55.0084,
-         82.9357
+         53.515,
+         49.41
       ],
-      "title": "Металлургический завод",
-      "industry": "Промышленное производство",
+      "title": "Строительство завода по производству аммиака и водорода \"Линде Азот Тольятти\"",
       "images": [
          "img/projects/project-1.avif",
          "img/projects/project-2.avif",
@@ -113,29 +106,27 @@
    },
    {
       "id": 8,
-      "category": "industry",
+      "category": "Нефтегаз и нефтехимия",
       "coords": [
-         56.8389,
-         60.6057
+         55.637,
+         51.825
       ],
-      "title": "Машиностроительный комплекс",
-      "industry": "Промышленное производство",
+      "title": "Модернизация производства линейных альфа-олефинов (ЛАО) на ПАО \"Нижнекамскнефтехим\"",
       "images": [
-         "img/projects/project-4.avif",
-         "img/projects/project-5.avif",
-         "img/projects/project-6.avif"
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
       ],
       "link": "#"
    },
    {
       "id": 9,
-      "category": "agriculture",
+      "category": "Нефтегаз и нефтехимия",
       "coords": [
-         45.0355,
-         38.9753
+         55.87,
+         49.197
       ],
-      "title": "Агропромышленный кластер",
-      "industry": "Сельское хозяйство",
+      "title": "Строительство установки пиролиза пропан-бутана на ПАО \"Казаньоргсинтез\"",
       "images": [
          "img/projects/project-1.avif",
          "img/projects/project-2.avif",
@@ -145,29 +136,27 @@
    },
    {
       "id": 10,
-      "category": "agriculture",
+      "category": "Нефтегаз и нефтехимия",
       "coords": [
-         51.5336,
-         46.0343
+         51.517,
+         128.133
       ],
-      "title": "Зерновой терминал",
-      "industry": "Сельское хозяйство",
+      "title": "Строительство Амурского Газохимического Комплекса",
       "images": [
-         "img/projects/project-4.avif",
-         "img/projects/project-5.avif",
-         "img/projects/project-6.avif"
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
       ],
       "link": "#"
    },
    {
       "id": 11,
-      "category": "mining",
+      "category": "Газовая инфраструктура и СПГ",
       "coords": [
-         69.3558,
-         88.1893
+         34.68,
+         37.35
       ],
-      "title": "Горно-обогатительный комбинат",
-      "industry": "Горнодобывающая промышленность",
+      "title": "Реконструкция Южного Газоперерабатывающего Завода (ГПЗ-1) в Сирии",
       "images": [
          "img/projects/project-1.avif",
          "img/projects/project-2.avif",
@@ -177,29 +166,27 @@
    },
    {
       "id": 12,
-      "category": "mining",
+      "category": "Газовая инфраструктура и СПГ",
       "coords": [
-         53.1959,
-         50.1008
+         70.995,
+         73.82
       ],
-      "title": "Карьер по добыче полезных ископаемых",
-      "industry": "Горнодобывающая промышленность",
+      "title": "Проект по добыче природного газа и производству сжиженного природного газа (СПГ) в Арктическом регионе (\"Арктик СПГ-2\")",
       "images": [
-         "img/projects/project-4.avif",
-         "img/projects/project-5.avif",
-         "img/projects/project-6.avif"
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
       ],
       "link": "#"
    },
    {
       "id": 13,
-      "category": "logistics",
+      "category": "Агропромышленный сектор",
       "coords": [
-         59.9343,
-         30.3351
+         59.37,
+         28.6
       ],
-      "title": "Морской грузовой терминал",
-      "industry": "Логистика и портовая инфраструктура",
+      "title": "Строительство завода по производству аммиака и карбамида в г. Кингисепп (\"КИНГИСЕПП-2\")",
       "images": [
          "img/projects/project-1.avif",
          "img/projects/project-2.avif",
@@ -209,17 +196,316 @@
    },
    {
       "id": 14,
-      "category": "logistics",
+      "category": "Горнодобывающая отрасль",
       "coords": [
-         43.5855,
-         39.7231
+         43.56,
+         69.74
       ],
-      "title": "Логистический хаб",
-      "industry": "Логистика и портовая инфраструктура",
+      "title": "Строительство производственного комплекса по добыче фосфатов в Казахстане",
       "images": [
-         "img/projects/project-4.avif",
-         "img/projects/project-5.avif",
-         "img/projects/project-6.avif"
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 15,
+      "category": "Агропромышленный сектор",
+      "coords": [
+         43.56,
+         69.74
+      ],
+      "title": "Строительства завода по производству серной кислоты в Казахстане",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 16,
+      "category": "Агропромышленный сектор",
+      "coords": [
+         43.56,
+         69.74
+      ],
+      "title": "Строительство химического комплекса в г. Жанатас (Казахстан)",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 17,
+      "category": "Нефтегаз и нефтехимия",
+      "coords": [
+         55.638,
+         37.806
+      ],
+      "title": "Строительство установки гидрокрекинга (УГК) и установки производства водорода (УПВ) на Московском НПЗ",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 18,
+      "category": "Нефтегаз и нефтехимия",
+      "coords": [
+         59.68,
+         28.4
+      ],
+      "title": "Строительство Балтийского Газохимического Комплекса (Балтийский ГХК)",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 19,
+      "category": "Нефтегаз и нефтехимия",
+      "coords": [
+         55.637,
+         51.825
+      ],
+      "title": "Строительство производства этилбензола/стирола и полистирола (стирольная цепочка) в г. Нижнекамске",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 20,
+      "category": "Нефтегаз и нефтехимия",
+      "coords": [
+         58.197,
+         68.253
+      ],
+      "title": "Строительство нефтехимического комплекса ЗапСиб-2",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 21,
+      "category": "Нефтегаз и нефтехимия",
+      "coords": [
+         58.197,
+         68.253
+      ],
+      "title": "Строительство завода по производству малеинового ангидрида в г. Тобольске",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 22,
+      "category": "Энергетика / ВИЭ",
+      "coords": [
+         58.21,
+         68.23
+      ],
+      "title": "Модернизация Тобольской ТЭЦ",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 23,
+      "category": "Нефтегаз и нефтехимия",
+      "coords": [
+         55.637,
+         51.825
+      ],
+      "title": "Строительство установки по произодству гексена на ПАО \"Нижнекамскнефтехим\"",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 24,
+      "category": "Нефтегаз и нефтехимия",
+      "coords": [
+         58.26,
+         68.43
+      ],
+      "title": "Cтроительство нового комплекса производства пропилена дегидрированием пропана и деривативов пропилена ДГП-2",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 25,
+      "category": "Нефтегаз и нефтехимия",
+      "coords": [
+         55.87,
+         49.197
+      ],
+      "title": "Строительство катализаторной фабрики для полиолефинов на ПАО \"Казаньоргсинтез\" Производство хромовых катализаторов на силикагеле",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 26,
+      "category": "Газовая инфраструктура и СПГ",
+      "coords": [
+         59.68,
+         28.4
+      ],
+      "title": "Строительство комплекса по переработке этансодержащего газа и производству СПГ в пос. Усть-Луга",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 27,
+      "category": "Газовая инфраструктура и СПГ",
+      "coords": [
+         59.68,
+         28.4
+      ],
+      "title": "Строительство товарно-сырьевой база (ТСБ) и морского отгрузочного терминала (МОТ) в составе Комплекса переработки этансодержащего газа (КПЭГ) в пос. Усть-Луга. ",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 28,
+      "category": "Логистика и портовая инфраструктура",
+      "coords": [
+         44.65,
+         37.82
+      ],
+      "title": "Расширение системы Каспийского Трубопроводного Консорциума",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 29,
+      "category": "Энергетика / ВИЭ",
+      "coords": [
+         54.42,
+         84.36
+      ],
+      "title": "Строительство подстанции 110кВ \"Молзавод\" в г. Новосибирск",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 30,
+      "category": "Промышленное строительство",
+      "coords": [
+         69.34,
+         88.22
+      ],
+      "title": "Проект нейтрализации серной кислоты на Надежкинском Металлургическом Заводе (ПАО \"Норникель\")",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 31,
+      "category": "Газовая инфраструктура и СПГ",
+      "coords": [
+         66.113,
+         76.66
+      ],
+      "title": "Строительство административного комплекса ООО \"Газпром добыча Уренгой\"",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 32,
+      "category": "Логистика и портовая инфраструктура",
+      "coords": [
+         42.73,
+         132.87
+      ],
+      "title": "Строительство трубопровода \"Восточная Сибирь - Тихий океан\" (ВСТО)",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 33,
+      "category": "Логистика и портовая инфраструктура",
+      "coords": [
+         59.68,
+         28.4
+      ],
+      "title": "Строительство Газоперерабатывающего завода и технологических объектов общезаводского хозяйства в рамках строительства Комплекса переработки этаносодержащего газа в пос. Усть-Луга.",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
+      ],
+      "link": "#"
+   },
+   {
+      "id": 34,
+      "category": "Нефтегаз и нефтехимия",
+      "coords": [
+         30.88,
+         47.29
+      ],
+      "title": "Западная Курна-2",
+      "images": [
+         "img/projects/project-1.avif",
+         "img/projects/project-2.avif",
+         "img/projects/project-3.avif"
       ],
       "link": "#"
    }
