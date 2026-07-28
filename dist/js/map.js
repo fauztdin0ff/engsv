@@ -65,7 +65,9 @@ async function initMap() {
    const popupCategory = document.querySelector('.geo__popup-category');
    const popupGallery = document.querySelector('.geo__popup-gallery');
    const popupButton = document.querySelector('.geo__popup-button');
-   const filtersContainer = document.querySelector('.geo__filters');
+   const popupClose = document.querySelector('.geo__popup-close');
+
+   /* const filtersContainer = document.querySelector('.geo__filters'); */
 
    function openPopup(project) {
 
@@ -100,6 +102,20 @@ async function initMap() {
       */
 
       popup.classList.add('show');
+   }
+
+   function closePopup() {
+      popup.classList.remove('show');
+
+      const bounds = ymaps.geoQuery(
+         placemarks.map(item => item.placemark)
+      ).getBounds();
+
+      map.setBounds(bounds, {
+         checkZoomRange: true,
+         zoomMargin: 80,
+         duration: 500
+      });
    }
 
    const map = new ymaps.Map('map', {
@@ -149,10 +165,14 @@ async function initMap() {
 
    });
 
-   map.events.add('click', () => {
-      popup.classList.remove('show');
+   map.events.add('click', closePopup);
+
+   popupClose.addEventListener('click', e => {
+      e.stopPropagation();
+      closePopup();
    });
 
+   /* 
    // =========================================================================
    // Создание фильтров
    // =========================================================================
@@ -234,7 +254,7 @@ async function initMap() {
       });
 
    });
-
+*/
    const bounds = ymaps.geoQuery(
       placemarks.map(item => item.placemark)
    ).getBounds();
