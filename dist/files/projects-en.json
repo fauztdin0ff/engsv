@@ -1,0 +1,376 @@
+[
+   {
+      "id": 1,
+      "category": "Oil & Gas and Petrochemicals",
+      "coords": [
+         54.935,
+         73.395
+      ],
+      "title": "Construction of a Delayed Coking Unit at Omsk Refinery",
+      "image": "img/projects/n-8.avif",
+      "link": "#"
+   },
+   {
+      "id": 2,
+      "category": "Gas Infrastructure & LNG",
+      "coords": [
+         51.517,
+         128.133
+      ],
+      "title": "Construction of the Amur Gas Processing Plant (Amur GPP)",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 3,
+      "category": "Oil & Gas and Petrochemicals",
+      "coords": [
+         55.638,
+         37.806
+      ],
+      "title": "Construction of the EURO+ Integrated Oil Refining Unit at the Moscow Refinery",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 4,
+      "category": "Agro-Industrial Sector",
+      "coords": [
+         53.515,
+         49.41
+      ],
+      "title": "Construction of the Granulated Urea Production Facility (\"Volgafert\") in Togliatti",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 5,
+      "category": "Oil & Gas and Petrochemicals",
+      "coords": [
+         56.107,
+         44.155
+      ],
+      "title": "Construction of Diesel Fuel Hydrotreating, Hydrogen Production, Sulfur Recovery, Pressure Swing Adsorption, and Gas Fractionation Units at Kstovo Refinery",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 6,
+      "category": "Gas Infrastructure & LNG",
+      "coords": [
+         46.578,
+         142.925
+      ],
+      "title": "Construction of a Liquefied Natural Gas (LNG) Production Plant in Sakhalin (\"Sakhalin-2\")",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 7,
+      "category": "Agro-Industrial Sector",
+      "coords": [
+         53.515,
+         49.41
+      ],
+      "title": "Construction of the Ammonia and Hydrogen Production Plant \"Linde Azot Togliatti\"",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 8,
+      "category": "Oil & Gas and Petrochemicals",
+      "coords": [
+         55.637,
+         51.825
+      ],
+      "title": "Modernization of the Linear Alpha Olefin (LAO) Production Facility at PJSC \"Nizhnekamskneftekhim\"",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 9,
+      "category": "Oil & Gas and Petrochemicals",
+      "coords": [
+         55.87,
+         49.197
+      ],
+      "title": "Construction of a Propane-Butane Pyrolysis Unit at PJSC \"Kazanorgsintez\"",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 10,
+      "category": "Oil & Gas and Petrochemicals",
+      "coords": [
+         51.517,
+         128.133
+      ],
+      "title": "Construction of the Amur Gas Chemical Complex",
+      "image": "img/projects/n-3.avif",
+      "link": "#"
+   },
+   {
+      "id": 11,
+      "category": "Gas Infrastructure & LNG",
+      "coords": [
+         34.68,
+         37.35
+      ],
+      "title": "Reconstruction of the Southern Gas Processing Plant (GPP-1) in Syria",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 12,
+      "category": "Gas Infrastructure & LNG",
+      "coords": [
+         70.995,
+         73.82
+      ],
+      "title": "Natural Gas Extraction and LNG Production Project in the Arctic Region (\"Arctic LNG-2\")",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 13,
+      "category": "Agro-Industrial Sector",
+      "coords": [
+         59.37,
+         28.6
+      ],
+      "title": "Construction of an Ammonia and Urea Plant in Kingisepp (\"KINGISEPP-2\")",
+      "image": "img/projects/n-2.avif",
+      "link": "#"
+   },
+   {
+      "id": 14,
+      "category": "Mining Industry",
+      "coords": [
+         43.56,
+         69.74
+      ],
+      "title": "Construction of a Phosphate Mining and Processing Complex in Kazakhstan",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 15,
+      "category": "Agro-Industrial Sector",
+      "coords": [
+         43.56,
+         69.74
+      ],
+      "title": "Construction of a Sulfuric Acid Plant in Kazakhstan",
+      "image": "img/projects/n-12.avif",
+      "link": "#"
+   },
+   {
+      "id": 16,
+      "category": "Agro-Industrial Sector",
+      "coords": [
+         43.56,
+         69.74
+      ],
+      "title": "Construction of a Chemical Complex in Zhanatas (Kazakhstan)",
+      "image": "img/projects/n-11.avif",
+      "link": "#"
+   },
+   {
+      "id": 17,
+      "category": "Oil & Gas and Petrochemicals",
+      "coords": [
+         55.638,
+         37.806
+      ],
+      "title": "Construction of a Hydrocracking Unit and Hydrogen Production Unit at the Moscow Refinery",
+      "image": "img/projects/n-1.avif",
+      "link": "#"
+   },
+   {
+      "id": 18,
+      "category": "Oil & Gas and Petrochemicals",
+      "coords": [
+         59.68,
+         28.4
+      ],
+      "title": "Construction of the Baltic Gas Chemical Complex (Baltic GCC)",
+      "image": "img/projects/n-7.avif",
+      "link": "#"
+   },
+   {
+      "id": 19,
+      "category": "Oil & Gas and Petrochemicals",
+      "coords": [
+         55.637,
+         51.825
+      ],
+      "title": "Construction of Ethylbenzene/Styrene and Polystyrene (Styrene Chain) Production Facilities in Nizhnekamsk",
+      "image": "img/projects/n-9.avif",
+      "link": "#"
+   },
+   {
+      "id": 20,
+      "category": "Oil & Gas and Petrochemicals",
+      "coords": [
+         58.197,
+         68.253
+      ],
+      "title": "Construction of the ZapSib-2 Petrochemical Complex",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 21,
+      "category": "Oil & Gas and Petrochemicals",
+      "coords": [
+         58.197,
+         68.253
+      ],
+      "title": "Construction of a Maleic Anhydride Production Plant in Tobolsk",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 22,
+      "category": "Energy / Renewable Energy",
+      "coords": [
+         58.21,
+         68.23
+      ],
+      "title": "Modernization of the Tobolsk CHP Plant",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 23,
+      "category": "Oil & Gas and Petrochemicals",
+      "coords": [
+         55.637,
+         51.825
+      ],
+      "title": "Construction of a Hexene Production Unit at PJSC \"Nizhnekamskneftekhim\"",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 24,
+      "category": "Oil & Gas and Petrochemicals",
+      "coords": [
+         58.26,
+         68.43
+      ],
+      "title": "Construction of a New Propylene Production Complex Using Propane Dehydrogenation and Propylene Derivatives (PDH-2) in Tobolsk",
+      "image": "img/projects/n-10.avif",
+      "link": "#"
+   },
+   {
+      "id": 25,
+      "category": "Oil & Gas and Petrochemicals",
+      "coords": [
+         55.87,
+         49.197
+      ],
+      "title": "Construction of a Catalyst Plant for Polyolefins at PJSC \"Kazanorgsintez\" (Chromium Catalysts on Silica Gel Production)",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 26,
+      "category": "Gas Infrastructure & LNG",
+      "coords": [
+         59.68,
+         28.4
+      ],
+      "title": "Construction of an Ethane-Containing Gas Processing and LNG Production Complex in Ust-Luga",
+      "image": "img/projects/n-6.avif",
+      "link": "#"
+   },
+   {
+      "id": 27,
+      "category": "Gas Infrastructure & LNG",
+      "coords": [
+         59.68,
+         28.4
+      ],
+      "title": "Construction of a Feedstock Storage Facility and Marine Loading Terminal as part of the Ethane-Containing Gas Processing Complex (EGPC) in Ust-Luga",
+      "image": "img/projects/n-5.avif",
+      "link": "#"
+   },
+   {
+      "id": 28,
+      "category": "Logistics & Port Infrastructure",
+      "coords": [
+         44.65,
+         37.82
+      ],
+      "title": "Expansion of the Caspian Pipeline Consortium System",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 29,
+      "category": "Energy / Renewable Energy",
+      "coords": [
+         54.42,
+         84.36
+      ],
+      "title": "Construction of the 110kV \"Molzavod\" Substation in Novosibirsk",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 30,
+      "category": "Industrial Construction",
+      "coords": [
+         69.34,
+         88.22
+      ],
+      "title": "Sulfuric Acid Neutralization Project at Nadezhdinsky Metallurgical Plant (PJSC \"Norilsk Nickel\")",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 31,
+      "category": "Gas Infrastructure & LNG",
+      "coords": [
+         66.113,
+         76.66
+      ],
+      "title": "Construction of the Administrative Complex for Gazprom Dobycha Urengoy LLC",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 32,
+      "category": "Logistics & Port Infrastructure",
+      "coords": [
+         42.73,
+         132.87
+      ],
+      "title": "Construction of the \"Eastern Siberia – Pacific Ocean\" (ESPO) Pipeline",
+      "image": "",
+      "link": "#"
+   },
+   {
+      "id": 33,
+      "category": "Logistics & Port Infrastructure",
+      "coords": [
+         59.68,
+         28.4
+      ],
+      "title": "Construction of a Gas Processing Plant and Off-Site Utilities as part of the Ethane-Containing Gas Processing Complex in Ust-Luga",
+      "image": "img/projects/n-4.avif",
+      "link": "#"
+   },
+   {
+      "id": 34,
+      "category": "Oil & Gas and Petrochemicals",
+      "coords": [
+         30.88,
+         47.29
+      ],
+      "title": "West Qurna-2",
+      "image": "",
+      "link": "#"
+   }
+]

@@ -56,8 +56,22 @@ Map
 ============================================================================*/
 async function initMap() {
 
-   const projects = await fetch('./files/projects.json')
-      .then(response => response.json());
+   const lang = document.documentElement.lang.toLowerCase();
+
+   const i18n = {
+      ru: {
+         industry: 'Отрасль'
+      },
+      en: {
+         industry: 'Industry'
+      }
+   };
+
+   const t = i18n[lang] || i18n.en;
+
+   const projects = await fetch(`./files/projects-${lang}.json`)
+      .then(response => response.json())
+      .catch(() => fetch('./files/projects-en.json').then(res => res.json()));
    await ymaps.ready();
 
    const popup = document.querySelector('.geo__popup');
@@ -67,39 +81,22 @@ async function initMap() {
    const popupButton = document.querySelector('.geo__popup-button');
    const popupClose = document.querySelector('.geo__popup-close');
 
-   /* const filtersContainer = document.querySelector('.geo__filters'); */
 
    function openPopup(project) {
 
       popupTitle.textContent = project.title;
-      popupCategory.textContent = `Отрасль: ${project.category}`;
+      popupCategory.textContent = `${t.industry}: ${project.category}`;
 
-      /*
-      popupButton.href = project.link;
-   
+
       popupGallery.innerHTML = '';
-   
-      project.images.forEach(src => {
-   
-         popupGallery.insertAdjacentHTML(
-            'beforeend',
-            `
-            <a href="${src}"
-               class="geo__popup-image geo-lightbox"
-               data-gallery="project-${project.id}">
-               <img src="${src}" alt="" loading="lazy">
-            </a>
-            `
-         );
-   
-      });
-   
-      popupLightbox?.destroy();
-   
-      popupLightbox = GLightbox({
-         selector: '.geo-lightbox'
-      });
-      */
+
+      if (project.image) {
+         popupGallery.innerHTML = `
+            <div class="geo__popup-image">
+               <img src="${project.image}" alt="${project.title}" loading="lazy">
+            </div>
+         `;
+      }
 
       popup.classList.add('show');
    }
@@ -122,6 +119,9 @@ async function initMap() {
       center: [61, 90],
       zoom: 3,
       controls: ['zoomControl']
+   }, {
+      minZoom: 3,
+      maxZoom: 18
    });
 
    map.behaviors.disable('scrollZoom');
@@ -147,7 +147,7 @@ async function initMap() {
 
          map.setCenter(
             project.coords,
-            8,
+            6,
             {
                duration: 500
             }
@@ -165,6 +165,14 @@ async function initMap() {
 
    });
 
+   console.table(
+      placemarks.map(item => ({
+         title: item.project.title,
+         category: item.category,
+         coords: item.project.coords
+      }))
+   );
+
    map.events.add('click', closePopup);
 
    popupClose.addEventListener('click', e => {
@@ -172,89 +180,7 @@ async function initMap() {
       closePopup();
    });
 
-   /* 
-   // =========================================================================
-   // Создание фильтров
-   // =========================================================================
 
-   const categories = [...new Set(projects.map(project => project.category))];
-
-   filtersContainer.innerHTML = `
-      <button
-         type="button"
-         class="geo__filter active"
-         data-category="all">
-         Все проекты
-      </button>
-   `;
-
-   categories.forEach(category => {
-
-      filtersContainer.insertAdjacentHTML(
-         'beforeend',
-         `
-         <button
-            type="button"
-            class="geo__filter"
-            data-category="${category}">
-            ${category}
-         </button>
-         `
-      );
-
-   });
-
-   const filterButtons = filtersContainer.querySelectorAll('.geo__filter');
-
-   filterButtons.forEach(button => {
-
-      button.addEventListener('click', () => {
-
-         filterButtons.forEach(btn => btn.classList.remove('active'));
-
-         button.classList.add('active');
-
-         const category = button.dataset.category;
-
-         placemarks.forEach(item => {
-
-            map.geoObjects.remove(item.placemark);
-
-            if (
-               category === 'all' ||
-               item.category === category
-            ) {
-               map.geoObjects.add(item.placemark);
-            }
-
-         });
-
-         popup.classList.remove('show');
-
-         const visiblePlacemarks = placemarks.filter(item =>
-            category === 'all'
-               ? true
-               : item.category === category
-         );
-
-         if (visiblePlacemarks.length) {
-
-            const bounds = ymaps.geoQuery(
-               visiblePlacemarks.map(item => item.placemark)
-            ).getBounds();
-
-            map.setBounds(bounds, {
-               checkZoomRange: true,
-               zoomMargin: 80,
-               duration: 500
-            });
-
-         }
-
-      });
-
-   });
-*/
    const bounds = ymaps.geoQuery(
       placemarks.map(item => item.placemark)
    ).getBounds();
