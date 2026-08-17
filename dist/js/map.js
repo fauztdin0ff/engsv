@@ -126,6 +126,22 @@ async function initMap() {
 
    map.behaviors.disable('scrollZoom');
 
+
+   const clusterer = new ymaps.Clusterer({
+      clusterIcons: [{
+         href: '',
+         size: [46, 46],
+         offset: [-23, -23]
+      }],
+
+      clusterIconContentLayout: ymaps.templateLayoutFactory.createClass(`
+      <div class="cluster-marker">
+         {{ properties.geoObjects.length }}
+      </div>
+   `)
+   });
+
+
    const placemarks = [];
 
    projects.forEach(project => {
@@ -155,7 +171,7 @@ async function initMap() {
 
       });
 
-      map.geoObjects.add(placemark);
+      clusterer.add(placemark);
 
       placemarks.push({
          category: project.category,
@@ -165,13 +181,7 @@ async function initMap() {
 
    });
 
-   console.table(
-      placemarks.map(item => ({
-         title: item.project.title,
-         category: item.category,
-         coords: item.project.coords
-      }))
-   );
+   map.geoObjects.add(clusterer);
 
    map.events.add('click', closePopup);
 

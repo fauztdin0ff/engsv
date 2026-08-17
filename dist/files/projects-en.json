@@ -69,8 +69,8 @@
       "id": 7,
       "category": "Agro-Industrial Sector",
       "coords": [
-         53.515,
-         49.41
+         53.519,
+         49.414
       ],
       "title": "Construction of the Ammonia and Hydrogen Production Plant \"Linde Azot Togliatti\"",
       "image": "",
@@ -102,8 +102,8 @@
       "id": 10,
       "category": "Oil & Gas and Petrochemicals",
       "coords": [
-         51.517,
-         128.133
+         51.521,
+         128.137
       ],
       "title": "Construction of the Amur Gas Chemical Complex",
       "image": "img/projects/n-3.avif",
@@ -157,8 +157,8 @@
       "id": 15,
       "category": "Agro-Industrial Sector",
       "coords": [
-         43.56,
-         69.74
+         43.564,
+         69.744
       ],
       "title": "Construction of a Sulfuric Acid Plant in Kazakhstan",
       "image": "img/projects/n-12.avif",
@@ -168,8 +168,8 @@
       "id": 16,
       "category": "Agro-Industrial Sector",
       "coords": [
-         43.56,
-         69.74
+         43.556,
+         69.736
       ],
       "title": "Construction of a Chemical Complex in Zhanatas (Kazakhstan)",
       "image": "img/projects/n-11.avif",
@@ -179,8 +179,8 @@
       "id": 17,
       "category": "Oil & Gas and Petrochemicals",
       "coords": [
-         55.638,
-         37.806
+         55.642,
+         37.810
       ],
       "title": "Construction of a Hydrocracking Unit and Hydrogen Production Unit at the Moscow Refinery",
       "image": "img/projects/n-1.avif",
@@ -201,8 +201,8 @@
       "id": 19,
       "category": "Oil & Gas and Petrochemicals",
       "coords": [
-         55.637,
-         51.825
+         55.641,
+         51.829
       ],
       "title": "Construction of Ethylbenzene/Styrene and Polystyrene (Styrene Chain) Production Facilities in Nizhnekamsk",
       "image": "img/projects/n-9.avif",
@@ -223,8 +223,8 @@
       "id": 21,
       "category": "Oil & Gas and Petrochemicals",
       "coords": [
-         58.197,
-         68.253
+         58.201,
+         68.257
       ],
       "title": "Construction of a Maleic Anhydride Production Plant in Tobolsk",
       "image": "",
@@ -245,8 +245,8 @@
       "id": 23,
       "category": "Oil & Gas and Petrochemicals",
       "coords": [
-         55.637,
-         51.825
+         55.633,
+         51.821
       ],
       "title": "Construction of a Hexene Production Unit at PJSC \"Nizhnekamskneftekhim\"",
       "image": "",
@@ -267,8 +267,8 @@
       "id": 25,
       "category": "Oil & Gas and Petrochemicals",
       "coords": [
-         55.87,
-         49.197
+         55.874,
+         49.201
       ],
       "title": "Construction of a Catalyst Plant for Polyolefins at PJSC \"Kazanorgsintez\" (Chromium Catalysts on Silica Gel Production)",
       "image": "",
@@ -278,8 +278,8 @@
       "id": 26,
       "category": "Gas Infrastructure & LNG",
       "coords": [
-         59.68,
-         28.4
+         59.684,
+         28.404
       ],
       "title": "Construction of an Ethane-Containing Gas Processing and LNG Production Complex in Ust-Luga",
       "image": "img/projects/n-6.avif",
@@ -289,8 +289,8 @@
       "id": 27,
       "category": "Gas Infrastructure & LNG",
       "coords": [
-         59.68,
-         28.4
+         59.676,
+         28.396
       ],
       "title": "Construction of a Feedstock Storage Facility and Marine Loading Terminal as part of the Ethane-Containing Gas Processing Complex (EGPC) in Ust-Luga",
       "image": "img/projects/n-5.avif",
@@ -355,8 +355,8 @@
       "id": 33,
       "category": "Logistics & Port Infrastructure",
       "coords": [
-         59.68,
-         28.4
+         59.684,
+         28.396
       ],
       "title": "Construction of a Gas Processing Plant and Off-Site Utilities as part of the Ethane-Containing Gas Processing Complex in Ust-Luga",
       "image": "img/projects/n-4.avif",
