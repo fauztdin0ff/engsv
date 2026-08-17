@@ -126,6 +126,8 @@ async function initMap() {
 
    map.behaviors.disable('scrollZoom');
 
+   const CLUSTER_ZOOM = 5;
+   const MARKER_ZOOM = 7;
 
    const clusterer = new ymaps.Clusterer({
       clusterIcons: [{
@@ -157,15 +159,19 @@ async function initMap() {
          }
       );
 
+      const MARKER_ZOOM = 7;
+
       placemark.events.add('click', () => {
 
          openPopup(project);
 
+         const currentZoom = map.getZoom();
+
          map.setCenter(
             project.coords,
-            6,
+            currentZoom < MARKER_ZOOM ? MARKER_ZOOM : currentZoom,
             {
-               duration: 500
+               duration: 400
             }
          );
 
@@ -197,7 +203,7 @@ async function initMap() {
 
    map.setBounds(bounds, {
       checkZoomRange: true,
-      zoomMargin: 80
+      zoomMargin: [120, 120, 120, 120]
    });
 
    map.events.once('boundschange', () => {
