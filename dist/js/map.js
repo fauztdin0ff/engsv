@@ -85,7 +85,7 @@ async function initMap() {
    function openPopup(project) {
 
       popupTitle.textContent = project.title;
-      popupCategory.textContent = `${t.industry}: ${project.category}`;
+      /* popupCategory.textContent = `${t.industry}: ${project.category}`; */
 
 
       popupGallery.innerHTML = '';
