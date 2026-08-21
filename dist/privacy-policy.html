@@ -53,9 +53,9 @@
    <meta name="twitter:image" content="https://fauztdin0ff.github.io/engsv/dist/img/fav/og-image-xl.jpg">
 
    <!-- Styles -->
-   <link rel="stylesheet" href="css/splide.min.css?_v=20260817215942">
-   <link rel="stylesheet" href="css/glightbox.min.css?_v=20260817215942">
-   <link rel="stylesheet" href="css/style.min.css?_v=20260817215942">
+   <link rel="stylesheet" href="css/splide.min.css?_v=20260821175030">
+   <link rel="stylesheet" href="css/glightbox.min.css?_v=20260821175030">
+   <link rel="stylesheet" href="css/style.min.css?_v=20260821175030">
 </head>
 
 <body>
@@ -165,7 +165,8 @@
                </div>
 
                <div class="menu__button">
-                  <button type="button" class="btn open-popup" data-popup="request-popup"><span>Получить
+                  <button type="button" class="btn open-popup" data-form-block="Меню сайта"
+                     data-popup="request-popup"><span>Получить
                         консультацию</span></button>
                </div>
 
@@ -843,13 +844,28 @@
                <div class="footer__col">
                   <div class="subscribe">
                      <div class="subscribe__title">Подписаться на новости</div>
-                     <div class="subscribe__form">
-                        <div class="subscribe__area">
-                           <input type="email" name="subscribe-email" autocomplete="email" class="input"
-                              placeholder="Email*" required>
-                        </div>
-                        <div class="subscribe__submit">
-                           <button type="submit" class="btn -outline"><span>Подписаться</span></button>
+                     <div class="form-wrapper">
+                        <form action="send.php" method="post" class="subscribe__form form">
+
+                           <input type="text" name="name" style="display: none;">
+                           <input type="text" name="block" value="Форма подписки" style="display: none;">
+                           <input type="text" name="subject" value="Пользователь подписался" style="display: none;">
+                           <input type="text" name="required" value="email" style="display: none;">
+
+                           <div class="subscribe__area field required">
+                              <label for="subscribe-email">Email</label>
+                              <input type="email" id="subscribe-email" name="subscribe-email" autocomplete="email"
+                                 class="input">
+                           </div>
+                           <div class="subscribe__submit">
+                              <button type="submit" class="btn -outline"><span>Подписаться</span></button>
+                           </div>
+                        </form>
+                        <div class="form-sending">
+                           <div class="form-sending-icon">
+                              <span class="form-loader"></span>
+                           </div>
+                           <div class="form-sending-title">Отправляем</div>
                         </div>
                      </div>
                   </div>
@@ -900,36 +916,54 @@
                Получите консультацию наших экспертов
             </div>
             <div class="popup__content">
-               <form class="callback__form">
-                  <div class="callback__form-row">
-                     <div class="callback__form-area">
-                        <input type="text" name="name" class="input" autocomplete="name" placeholder="Имя*" required>
+               <div class="form-wrapper">
+                  <form action="send.php" method="post" class="callback__form form">
+
+                     <input type="text" name="name" style="display: none;">
+                     <input type="text" name="block" value="" style="display: none;">
+                     <input type="text" name="subject" value="Заявка на консультацию" style="display: none;">
+                     <input type="text" name="required" value="phone" style="display: none;">
+
+                     <div class="callback__form-row">
+                        <div class="callback__form-area field required">
+                           <label for="name2">Имя</label>
+                           <input type="text" id="name2" name="lucky" class="input" autocomplete="name">
+                        </div>
+                        <div class="callback__form-area field required">
+                           <label for="email2">Email</label>
+                           <input type="email" id="email2" name="email" class="input" autocomplete="email">
+                        </div>
                      </div>
-                     <div class="callback__form-area">
-                        <input type="email" name="email" class="input" autocomplete="email" placeholder="Email*"
-                           required>
+                     <div class="callback__form-row">
+                        <div class="callback__form-area field required">
+                           <label for="phone2">Телефон</label>
+                           <input type="text" id="phone2" name="phone" class="input" inputmode="numeric"
+                              autocomplete="tel">
+                        </div>
+                        <div class="callback__form-area field">
+                           <label for="company2">Компания</label>
+                           <input type="text" id="company2" name="company" class="input">
+                        </div>
                      </div>
+                     <div class="callback__form-row">
+                        <div class="callback__form-area field">
+                           <label for="message2">Сообщение</label>
+                           <textarea id="message2" name="message" class="textarea"></textarea>
+                        </div>
+                     </div>
+                     <div class="callback__actions">
+                        <div class="callback__submit">
+                           <button type="submit" class="btn"><span>Отправить</span></button>
+                        </div>
+                     </div>
+                  </form>
+                  <div class="form-sending">
+                     <div class="form-sending-icon">
+                        <span class="form-loader"></span>
+                     </div>
+                     <div class="form-sending-title">Отправляем</div>
                   </div>
-                  <div class="callback__form-row">
-                     <div class="callback__form-area">
-                        <input type="text" name="tel" class="input tel-mask" autocomplete="tel" placeholder="Телефон*"
-                           required>
-                     </div>
-                     <div class="callback__form-area">
-                        <input type="text" name="company" class="input" placeholder="Компания">
-                     </div>
-                  </div>
-                  <div class="callback__form-row">
-                     <div class="callback__form-area">
-                        <textarea name="message" class="textarea" placeholder="Сообщение"></textarea>
-                     </div>
-                  </div>
-                  <div class="callback__actions">
-                     <div class="callback__submit">
-                        <button type="submit" class="btn"><span>Отправить</span></button>
-                     </div>
-                  </div>
-               </form>
+               </div>
             </div>
          </div>
       </div>
@@ -948,51 +982,71 @@
                Оставьте свои данные — мы свяжемся с вами при появлении подходящей позиции
             </div>
             <div class="popup__content">
-               <form class="callback__form">
-                  <div class="callback__form-row">
-                     <div class="callback__form-area">
-                        <input type="text" name="name" class="input" autocomplete="name" placeholder="Имя*" required>
+               <div class="form-wrapper">
+                  <form action="send.php" method="POST" class="callback__form form" enctype="multipart/form-data">
+
+                     <input type="text" name="name" style="display: none;">
+                     <input type="text" name="block" value="" style="display: none;">
+                     <input type="text" name="subject" value="Заявка на вакансию" style="display: none;">
+                     <input type="text" name="required" value="phone" style="display: none;">
+
+                     <div class="callback__form-row">
+                        <div class="callback__form-area field required">
+                           <label for="name3">Имя</label>
+                           <input type="text" id="name3" name="lucky" class="input" autocomplete="name">
+                        </div>
                      </div>
-                     <div class="callback__form-area">
-                        <input type="email" name="email" class="input" autocomplete="email" placeholder="Email*"
-                           required>
+                     <div class="callback__form-row">
+                        <div class="callback__form-area field required">
+                           <label for="email3">Email</label>
+                           <input type="email" id="email3" name="email" class="input" autocomplete="email">
+                        </div>
+                        <div class="callback__form-area field required">
+                           <label for="phone3">Телефон</label>
+                           <input type="text" id="phone3" name="phone" class="input" autocomplete="tel">
+                        </div>
                      </div>
+                     <div class="callback__form-row">
+                        <div class="callback__form-area field">
+                           <label for="role3">Желаемая позиция</label>
+                           <input type="text" id="role3" name="role" class="input">
+                        </div>
+                     </div>
+                     <div class="callback__form-row">
+                        <div class="callback__form-area field">
+                           <label for="message3">Сообщение</label>
+                           <textarea id="message3" name="message" class="textarea"></textarea>
+                        </div>
+                     </div>
+                     <div class="callback__form-row">
+                        <div class="callback__form-area">
+                           <label class="upload">
+                              <input class="upload__input" name="file" type="file" accept=".pdf,.doc,.docx">
+                              <span class="upload__text">
+                                 <i>Загрузить резюме</i> или перетяните его сюда (форматы pdf/doc/docx)*
+                              </span>
+                           </label>
+                           <div class="upload__error"></div>
+                        </div>
+                     </div>
+                     <div class="callback__actions">
+                        <div class="callback__submit">
+                           <button type="submit" class="btn"><span>Отправить</span></button>
+                        </div>
+                        <div class="callback__agree">
+                           Нажимая на кнопку «Отправить заявку», вы даёте согласие на обработку персональных данных
+                           согласно <a href="">Политике персональных данных</a>
+                        </div>
+                     </div>
+                  </form>
+
+                  <div class="form-sending">
+                     <div class="form-sending-icon">
+                        <span class="form-loader"></span>
+                     </div>
+                     <div class="form-sending-title">Отправляем</div>
                   </div>
-                  <div class="callback__form-row">
-                     <div class="callback__form-area">
-                        <input type="text" name="tel" class="input tel-mask" autocomplete="tel" placeholder="Телефон*"
-                           required>
-                     </div>
-                     <div class="callback__form-area">
-                        <input type="text" name="company" class="input" placeholder="Компания">
-                     </div>
-                  </div>
-                  <div class="callback__form-row">
-                     <div class="callback__form-area">
-                        <textarea name="message" class="textarea" placeholder="Сообщение"></textarea>
-                     </div>
-                  </div>
-                  <div class="callback__form-row">
-                     <div class="callback__form-area">
-                        <label class="upload">
-                           <input class="upload__input" name="file" type="file" accept=".pdf,.doc,.docx">
-                           <span class="upload__text">
-                              <i>Загрузить резюме</i> или перетяните его сюда (форматы pdf/doc/docx)*
-                           </span>
-                        </label>
-                        <div class="upload__error"></div>
-                     </div>
-                  </div>
-                  <div class="callback__actions">
-                     <div class="callback__submit">
-                        <button type="submit" class="btn"><span>Отправить</span></button>
-                     </div>
-                     <div class="callback__agree">
-                        Нажимая на кнопку «Отправить заявку», вы даёте согласие на обработку персональных данных
-                        согласно <a href="">Политике персональных данных</a>
-                     </div>
-                  </div>
-               </form>
+               </div>
             </div>
          </div>
       </div>
@@ -1014,7 +1068,7 @@
                Совсем скоро мы свяжемся с вами
             </div>
             <div class="thanks-popup__button">
-               <button type="button" class="btn popup__close"><span>Ок</span></button>
+               <button type="button" class="btn popup__close reset-button"><span>Ок</span></button>
             </div>
          </div>
       </div>
@@ -1026,8 +1080,9 @@
    </div>
 
 
-   <script src="js/app.js?_v=20260820095430"></script>
-   <script src="js/map.js?_v=20260820095430"></script>
+   <script src="js/app.js?_v=20260821175030"></script>
+   <script src="js/send.js?_v=20260821175030"></script>
+   <script src="js/map.js?_v=20260821175030"></script>
 </body>
 
 </html>
