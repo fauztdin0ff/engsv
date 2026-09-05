@@ -1,0 +1,22 @@
+<svg width="341" height="341" viewBox="0 0 341 341" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.5 0.5H0.5V5.5" stroke="white"/>
+<path d="M335.5 0.5H340.5V5.5" stroke="white"/>
+<path d="M170.5 5.5V0.5M170.5 0.5H165.5M170.5 0.5H175.5" stroke="white"/>
+<path d="M10.5 0.5H160.5" stroke="white" stroke-opacity="0.4"/>
+<path d="M180.5 0.5H330.5" stroke="white" stroke-opacity="0.4"/>
+<path d="M10.5 170.5H160.5" stroke="white" stroke-opacity="0.4"/>
+<path d="M180.5 170.5H330.5" stroke="white" stroke-opacity="0.4"/>
+<path d="M5.5 170.5H0.5M0.5 170.5L0.5 175.5M0.5 170.5L0.5 165.5" stroke="white"/>
+<path d="M335.5 170.5H340.5M340.5 170.5V175.5M340.5 170.5V165.5" stroke="white"/>
+<path d="M5.5 340.5H0.5V335.5" stroke="white"/>
+<path d="M335.5 340.5H340.5V335.5" stroke="white"/>
+<path d="M170.5 335.5V340.5M170.5 340.5H165.5M170.5 340.5H175.5" stroke="white"/>
+<path d="M10.5 340.5H160.5" stroke="white" stroke-opacity="0.4"/>
+<path d="M180.5 340.5H330.5" stroke="white" stroke-opacity="0.4"/>
+<path d="M0.5 160.5L0.5 10.5" stroke="white" stroke-opacity="0.4"/>
+<path d="M170.5 160.5V10.5" stroke="white" stroke-opacity="0.4"/>
+<path d="M340.5 160.5V10.5" stroke="white" stroke-opacity="0.4"/>
+<path d="M0.5 330.5L0.5 180.5" stroke="white" stroke-opacity="0.4"/>
+<path d="M170.5 330.5V180.5" stroke="white" stroke-opacity="0.4"/>
+<path d="M340.5 330.5V180.5" stroke="white" stroke-opacity="0.4"/>
+</svg>
