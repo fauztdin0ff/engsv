@@ -52,9 +52,9 @@
    <meta name="twitter:image" content="https://fauztdin0ff.github.io/engsv/dist/img/fav/og-image-xl.jpg">
 
    <!-- Styles -->
-   <link rel="stylesheet" href="css/splide.min.css?_v=20260909110405">
-   <link rel="stylesheet" href="css/glightbox.min.css?_v=20260909110405">
-   <link rel="stylesheet" href="css/style.min.css?_v=20260909110405">
+   <link rel="stylesheet" href="css/splide.min.css?_v=20260909194441">
+   <link rel="stylesheet" href="css/glightbox.min.css?_v=20260909194441">
+   <link rel="stylesheet" href="css/style.min.css?_v=20260909194441">
 </head>
 
 <body>
@@ -894,7 +894,22 @@
 
          <section class="sertificates">
             <div class="sertificates__body container">
-               <h2 class="sertificates__title section-title fade-up">Сертификаты и лицензии</h2>
+               <div class="sertificates__head">
+                  <h2 class="sertificates__title section-title fade-up">Сертификаты и лицензии</h2>
+                  <div class="sertificates__nav slider-buttons">
+                     <button type="button" class="sertificates__nav-prev slider-prev" aria-label="Предыдущий слайд">
+                        <svg>
+                           <use xlink:href="img/icons/icons.svg#icon-arrow-left"></use>
+                        </svg>
+                     </button>
+                     <button type="button" class="sertificates__nav-next slider-next" aria-label="Следующий слайд">
+                        <svg>
+                           <use xlink:href="img/icons/icons.svg#icon-arrow-right"></use>
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+
                <div class="sertificates__content">
                   <div class="sertificates__gallery fade-up">
                      <img src="img/sert-1.avif" width="523" height="740" alt="Сертификат" loading="lazy" data-image="1">
@@ -903,95 +918,120 @@
                      <img src="img/sert-4.avif" width="523" height="740" alt="Сертификат" loading="lazy" data-image="4">
                   </div>
 
-                  <div class="sertificates__items fade-up">
-                     <a href="files/test.pdf" class="sertificates__item" data-image="1">
-                        <div class="sertificates__item-num">01</div>
-                        <div class="sertificates__item-info">
-                           <div class="sertificates__item-name">ISO 9001</div>
-                           <div class="sertificates__item-text">Международный сертификат соответствия «Система
-                              менеджмента качества»</div>
-                           <div class="sertificates__item-link arrow-link">
-                              Открыть PDF
-                              <div class="arrow-link__icon">
-                                 <svg>
-                                    <use xlink:href="img/icons/icons.svg#icon-arrow-long"></use>
-                                 </svg>
+                  <div class="sertificates__items splide fade-up">
+                     <div class="splide__track">
+                        <div class="splide__list">
+                           <div class="sertificates__item splide__slide" data-image="1">
+                              <div class="sertificates__item-image">
+                                 <img src="img/sert-1.avif" alt="sertificate">
+                              </div>
+                              <div class="sertificates__item-wrapper">
+                                 <div class="sertificates__item-num">01</div>
+                                 <div class="sertificates__item-info">
+                                    <div class="sertificates__item-name">ISO 9001</div>
+                                    <div class="sertificates__item-text">Международный сертификат соответствия «Система
+                                       менеджмента качества»</div>
+                                    <a href="files/test.pdf" target="_blank" class="sertificates__item-link arrow-link">
+                                       Открыть PDF
+                                       <div class="arrow-link__icon">
+                                          <svg>
+                                             <use xlink:href="img/icons/icons.svg#icon-arrow-long"></use>
+                                          </svg>
+                                       </div>
+                                    </a>
+                                 </div>
+                                 <div class="sertificates__item-arrow">
+                                    <svg>
+                                       <use xlink:href="img/icons/icons.svg#icon-arrow-diagonal"></use>
+                                    </svg>
+                                 </div>
                               </div>
                            </div>
-                        </div>
-                        <div class="sertificates__item-arrow">
-                           <svg>
-                              <use xlink:href="img/icons/icons.svg#icon-arrow-diagonal"></use>
-                           </svg>
-                        </div>
-                     </a>
 
-                     <a href="files/test.pdf" class="sertificates__item" data-image="2">
-                        <div class="sertificates__item-num">02</div>
-                        <div class="sertificates__item-info">
-                           <div class="sertificates__item-name">ISO 14001</div>
-                           <div class="sertificates__item-text">Международный сертификат соответствия «Система
-                              экологического менеджмента»</div>
-                           <div class="sertificates__item-link arrow-link">
-                              Открыть PDF
-                              <div class="arrow-link__icon">
-                                 <svg>
-                                    <use xlink:href="img/icons/icons.svg#icon-arrow-long"></use>
-                                 </svg>
+                           <div class="sertificates__item splide__slide" data-image="2">
+                              <div class="sertificates__item-image">
+                                 <img src="img/sert-2.avif" alt="sertificate">
+                              </div>
+                              <div class="sertificates__item-wrapper">
+                                 <div class="sertificates__item-num">02</div>
+                                 <div class="sertificates__item-info">
+                                    <div class="sertificates__item-name">ISO 14001</div>
+                                    <div class="sertificates__item-text">Международный сертификат соответствия «Система
+                                       экологического менеджмента»</div>
+                                    <a href="files/test.pdf" target="_blank" class="sertificates__item-link arrow-link">
+                                       Открыть PDF
+                                       <div class="arrow-link__icon">
+                                          <svg>
+                                             <use xlink:href="img/icons/icons.svg#icon-arrow-long"></use>
+                                          </svg>
+                                       </div>
+                                    </a>
+                                 </div>
+                                 <div class="sertificates__item-arrow">
+                                    <svg>
+                                       <use xlink:href="img/icons/icons.svg#icon-arrow-diagonal"></use>
+                                    </svg>
+                                 </div>
                               </div>
                            </div>
-                        </div>
-                        <div class="sertificates__item-arrow">
-                           <svg>
-                              <use xlink:href="img/icons/icons.svg#icon-arrow-diagonal"></use>
-                           </svg>
-                        </div>
-                     </a>
 
-                     <a href="files/test.pdf" class="sertificates__item" data-image="3">
-                        <div class="sertificates__item-num">03</div>
-                        <div class="sertificates__item-info">
-                           <div class="sertificates__item-name">ISO 45001</div>
-                           <div class="sertificates__item-text">Международный сертификат соответствия «Система
-                              менеджмента охраны здоровья и безопасности труда»   </div>
-                           <div class="sertificates__item-link arrow-link">
-                              Открыть PDF
-                              <div class="arrow-link__icon">
-                                 <svg>
-                                    <use xlink:href="img/icons/icons.svg#icon-arrow-long"></use>
-                                 </svg>
+                           <div class="sertificates__item splide__slide" data-image="3">
+                              <div class="sertificates__item-image">
+                                 <img src="img/sert-3.avif" alt="sertificate">
+                              </div>
+                              <div class="sertificates__item-wrapper">
+                                 <div class="sertificates__item-num">03</div>
+                                 <div class="sertificates__item-info">
+                                    <div class="sertificates__item-name">ISO 45001</div>
+                                    <div class="sertificates__item-text">Международный сертификат соответствия «Система
+                                       менеджмента охраны здоровья и безопасности труда»   </div>
+                                    <a href="files/test.pdf" target="_blank" class="sertificates__item-link arrow-link">
+                                       Открыть PDF
+                                       <div class="arrow-link__icon">
+                                          <svg>
+                                             <use xlink:href="img/icons/icons.svg#icon-arrow-long"></use>
+                                          </svg>
+                                       </div>
+                                    </a>
+                                 </div>
+                                 <div class="sertificates__item-arrow">
+                                    <svg>
+                                       <use xlink:href="img/icons/icons.svg#icon-arrow-diagonal"></use>
+                                    </svg>
+                                 </div>
                               </div>
                            </div>
-                        </div>
-                        <div class="sertificates__item-arrow">
-                           <svg>
-                              <use xlink:href="img/icons/icons.svg#icon-arrow-diagonal"></use>
-                           </svg>
-                        </div>
-                     </a>
 
-                     <a href="files/test.pdf" class="sertificates__item" data-image="4">
-                        <div class="sertificates__item-num">04</div>
-                        <div class="sertificates__item-info">
-                           <div class="sertificates__item-name">Еще один сертификат</div>
-                           <div class="sertificates__item-text">Еще один сертификат еще один сертификат
-                              еще один сертификат</div>
-                           <div class="sertificates__item-link arrow-link">
-                              Открыть PDF
-                              <div class="arrow-link__icon">
-                                 <svg>
-                                    <use xlink:href="img/icons/icons.svg#icon-arrow-long"></use>
-                                 </svg>
+                           <div class="sertificates__item splide__slide" data-image="4">
+                              <div class="sertificates__item-image">
+                                 <img src="img/sert-4.avif" alt="sertificate">
+                              </div>
+                              <div class="sertificates__item-wrapper">
+                                 <div class="sertificates__item-num">04</div>
+                                 <div class="sertificates__item-info">
+                                    <div class="sertificates__item-name">Еще один сертификат</div>
+                                    <div class="sertificates__item-text">Еще один сертификат еще один сертификат
+                                       еще один сертификат</div>
+                                    <a href="files/test.pdf" target="_blank" class="sertificates__item-link arrow-link">
+                                       Открыть PDF
+                                       <div class="arrow-link__icon">
+                                          <svg>
+                                             <use xlink:href="img/icons/icons.svg#icon-arrow-long"></use>
+                                          </svg>
+                                       </div>
+                                    </a>
+                                 </div>
+                                 <div class="sertificates__item-arrow">
+                                    <svg>
+                                       <use xlink:href="img/icons/icons.svg#icon-arrow-diagonal"></use>
+                                    </svg>
+                                 </div>
                               </div>
                            </div>
                         </div>
-                        <div class="sertificates__item-arrow">
-                           <svg>
-                              <use xlink:href="img/icons/icons.svg#icon-arrow-diagonal"></use>
-                           </svg>
-                        </div>
-                     </a>
+                     </div>
                   </div>
+
                </div>
             </div>
          </section>
@@ -1566,9 +1606,9 @@
 </div>
    
 
-   <script src="js/app.js?_v=20260909110405"></script>
-   <script src="js/send.js?_v=20260909110405"></script>
-   <script src="js/map.js?_v=20260909110405"></script>
+   <script src="js/app.js?_v=20260909194441"></script>
+   <script src="js/send.js?_v=20260909194441"></script>
+   <script src="js/map.js?_v=20260909194441"></script>
 </body>
 
 </html>
