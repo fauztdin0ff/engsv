@@ -29,6 +29,26 @@ function initPopups() {
             blockInput.value = formBlock || '';
          }
 
+         const vacancyTitle = openButton
+            .closest('.vacancies__item')
+            ?.querySelector('.vacancies__item-name h3')
+            ?.textContent
+            ?.trim();
+
+         const positionInput = popup.querySelector('input[name="position"]');
+
+         if (positionInput) {
+            const field = positionInput.closest('.field');
+
+            if (vacancyTitle) {
+               positionInput.value = vacancyTitle;
+               field?.classList.add('is-focus');
+            } else {
+               positionInput.value = '';
+               field?.classList.remove('is-focus');
+            }
+         }
+
          popup.classList.add('show');
          document.body.style.overflow = 'hidden';
          return;

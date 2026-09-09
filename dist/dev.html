@@ -57,6 +57,157 @@
    <link rel="stylesheet" href="css/style.min.css?_v=20260909105340">
 </head>
 
+<style>
+   main {
+      padding-top: 160px;
+   }
+
+   h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+      color: #fff;
+   }
+
+   .subtitle {
+      color: #6b7280;
+      margin-bottom: 40px;
+   }
+
+   .section {
+      background: #fff;
+      padding: 50px 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+   }
+
+   .section-title {
+      font-size: 22px;
+      margin-bottom: 25px;
+   }
+
+   .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 18px;
+   }
+
+   .card {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      padding: 20px;
+      transition: .25s;
+      position: relative;
+   }
+
+   .card.disabled {
+      opacity: 0.7;
+      pointer-events: none;
+   }
+
+   .card.disabled .btn {
+      background: #ccc !important;
+      border-color: #ccc !important;
+   }
+
+   .card.disabled h3 i {
+      font-style: normal;
+      color: #374151;
+      font-weight: 400;
+      font-size: 0.6em;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 5;
+   }
+
+   .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, .08);
+   }
+
+   .card h3 {
+      font-size: 18px;
+   }
+
+   .card h3 span {
+      display: block;
+      font-size: 0.7em;
+      margin-top: 5px;
+      text-decoration: underline;
+      color: #385388;
+      font-weight: 400;
+   }
+
+   .card p {
+      color: #6b7280;
+      font-size: 14px;
+      line-height: 1.5;
+      flex: 1;
+   }
+
+   .btn {
+      padding: 8px 16px;
+   }
+
+   .-outline {
+      background: #fff !important;
+      color: var(--color-text);
+      border: 1px solid var(--color-text) !important;
+   }
+
+   .-outline::before,
+   .-outline::after,
+   .-outline span::before,
+   .-outline span::after {
+      border-color: var(--color-primary) !important;
+   }
+
+   @media (hover: hover) {
+      .-outline:hover {
+         background: var(--color-primary) !important;
+         color: #fff !important;
+         border-color: var(--color-primary) !important;
+      }
+   }
+
+   .note {
+      background: #eff6ff;
+      border-left: 6px solid #e80004;
+      padding: 18px;
+      border-radius: 10px;
+      color: #374151;
+      line-height: 1.6;
+   }
+
+   .dev-footer {
+      text-align: center;
+      color: #94a3b8;
+      margin-top: 40px;
+      font-size: 14px;
+   }
+
+   @media(max-width:768px) {
+      body {
+         padding: 30px 15px;
+      }
+
+      h1 {
+         font-size: 30px;
+      }
+
+      .section {
+         padding: 20px;
+      }
+
+      main {
+         padding-top: 100px;
+      }
+   }
+</style>
+
 <body>
    <div class="wrapper">
       <header class="header">
@@ -324,82 +475,209 @@
    </nav>
 </header>
       <main>
-         <section class="legal">
-            <div class="legal__body container">
-               <div class="legal__wrapper">
-                  <div class="legal__head">
-                     <h1 class="legal__title">Согласие на обработку персональных данных пользователя сайта</h1>
-                  </div>
-                  <div class="legal__text">
-                     <p>
-                        <b>
-                           Я, Пользователь сайта <a href="https://eng-sv.ru/">https://eng-sv.ru/</a> (далее — Веб-сайт)
-                           настоящим даю согласие ОБЩЕСТВУ С ОГРАНИЧЕННОЙ
-                           ОТВЕТСТВЕННОСТЬЮ "ИНЖИНИРИНГ СУПЕРВИЖН" ИНН 7736333668, ОГРН 1217700108890, 123112, г.
-                           Москва,
-                           вн.тер.г. муниципальный
-                           округ Пресненский, наб Пресненская, д. 12, помещ. 10/56 далее — Оператор, на обработку моих
-                           персональных данных на
-                           следующих условиях, а также на условиях, указанных в Политике обработки персональных данных
-                           Оператора, размещенной по
-                           адресу <a href="https://eng-sv.ru/privacy">https://eng-sv.ru/privacy</a>
-                        </b>
-                     </p>
-                     <ul>
-                        <li>• <b>Категории обрабатываемых персональных данных:</b> общие.</li>
-                        <li>
-                           • <b>Перечень обрабатываемых персональных данных:</b> фамилия, имя, отчество (в объеме,
-                           предоставленном
-                           Пользователем), номер
-                           мобильного телефона, адрес электронной почты (e-mail).
-                        </li>
-                        <li>
-                           • <b>Цели обработки персональных данных:</b> установление обратной связи, улучшение качества
-                           реализуемых на Веб-сайте услуг,
-                           улучшение качества работы Оператора на основании предоставленной Пользователем обратной
-                           связи.
-                        </li>
-                        <li>
-                           • <b>Способ обработки персональных данных:</b> смешанная автоматизированная и
-                           неавтоматизированная
-                           обработка персональных
-                           данных.
-                        </li>
-                        <li>
-                           • <b>Действия с персональными данными в ходе их обработки:</b> сбор, запись, систематизация,
-                           накопление, хранение, уточнение
-                           (обновление, изменение), извлечение, использование, передача, блокирование, удаление,
-                           уничтожение персональных данных.
-                        </li>
-                        <li>
-                           • <b>Срок действия согласия:</b> с даты предоставления персональных данных Пользователями с
-                           их
-                           согласия
-                           (в применимых случаях)
-                           до достижения цели обработки персональных данных, но в любом случае — не более 90 календарных
-                           дней, или до момента
-                           отзыва Пользователем своего согласия на обработку персональных данных/получения Оператором
-                           требования о прекращении
-                           обработки персональных данных, если иной срок не предусмотрен действующим законодательством.
-                        </li>
-                        <li>
-                           • <b>Отзыв согласия:</b> согласие может быть отозвано Пользователем в любой момент путем
-                           направления
-                           Оператору письменного
-                           заявления Пользователя на адрес электронной почты оператора <a
-                              href="mailto:inspection@eng-sv.ru">inspection@eng-sv.ru</a>. Заявление
-                           Пользователя должно
-                           содержать указание на фамилию и имя заявителя и указание на отзыв согласия на обработку
-                           персональных данных,
-                           предоставленных Оператору.
-                        </li>
+         <div class="container">
 
-                     </ul>
+            <h1> Project Preview</h1>
+            <p class="subtitle">
+               Страницы проекта и элементы для быстрого тестирования.
+            </p>
+
+            <div class="section">
+
+               <h2 class="section-title">
+                  📄 Страницы
+               </h2>
+
+               <div class="grid">
+
+                  <div class="card">
+                     <h3>Главная
+                        <span>index.html</span>
+                     </h3>
+                     <p>
+                        Основная страница сайта.
+                     </p>
+                     <a href="index.html" class="btn" target="_blank">
+                        <span>Открыть</span>
+                     </a>
                   </div>
+
+                  <div class="card">
+                     <h3>Услуги
+                        <span>services.html</span>
+                     </h3>
+                     <p>
+                        Страница каталога услуг.
+                     </p>
+                     <a href="services.html" class="btn" target="_blank">
+                        <span>Открыть</span>
+                     </a>
+                  </div>
+
+                  <div class="card">
+                     <h3>Услуги детальная
+                        <span>service.html</span>
+                     </h3>
+                     <p>
+                        Детальная информация об услуге (вар. 1).
+                     </p>
+                     <a href="service.html" class="btn" target="_blank">
+                        <span>Открыть</span>
+                     </a>
+                  </div>
+
+                  <div class="card">
+                     <h3>Услуги детальная
+                        <span>service-2.html</span>
+                     </h3>
+                     <p>
+                        Детальная информация об услуге (вар. 2).
+                     </p>
+                     <a href="service-2.html" class="btn" target="_blank">
+                        <span>Открыть</span>
+                     </a>
+                  </div>
+
+                  <div class="card disabled">
+                     <h3>Отрасли <i>(в разработке)</i></h3>
+                     <p>
+                        Страница отраслей.
+                     </p>
+                     <a href="#" class="btn" target="_blank">
+                        <span>Открыть</span>
+                     </a>
+                  </div>
+
+                  <div class="card disabled">
+                     <h3>Отрасли детальная <i>(в разработке)</i></h3>
+                     <p>
+                        Детальная страница отрасли.
+                     </p>
+                     <a href="#" class="btn" target="_blank">
+                        <span>Открыть</span>
+                     </a>
+                  </div>
+
+                  <div class="card disabled">
+                     <h3>Проекты <i>(в разработке)</i></h3>
+                     <p>
+                        Каталог проектов.
+                     </p>
+                     <a href="#" class="btn" target="_blank">
+                        <span>Открыть</span>
+                     </a>
+                  </div>
+
+                  <div class="card disabled">
+                     <h3>Страница проекта <i>(в разработке)</i></h3>
+                     <p>
+                        Детальная страница проекта.
+                     </p>
+                     <a href="#" class="btn" target="_blank">
+                        <span>Открыть</span>
+                     </a>
+                  </div>
+
+                  <div class="card disabled">
+                     <h3>Новости <i>(в разработке)</i></h3>
+                     <p>
+                        Страница новостей и блога
+                     </p>
+                     <a href="#" class="btn" target="_blank">
+                        <span>Открыть</span>
+                     </a>
+                  </div>
+
+                  <div class="card disabled">
+                     <h3>Страница статьи <i>(в разработке)</i></h3>
+                     <p>
+                        Детальная страница статьи.
+                     </p>
+                     <a href="#" class="btn" target="_blank">
+                        <span>Открыть</span>
+                     </a>
+                  </div>
+
+                  <div class="card disabled">
+                     <h3>Карьера <i>(в разработке)</i></h3>
+                     <p>
+                        Общая страница вакансий.
+                     </p>
+                     <a href="#" class="btn" target="_blank">
+                        <span>Открыть</span>
+                     </a>
+                  </div>
+
+                  <div class="card disabled">
+                     <h3>Вакансия <i>(в разработке)</i></h3>
+                     <p>
+                        Детальная страница вакансии.
+                     </p>
+                     <a href="#" class="btn" target="_blank">
+                        <span>Открыть</span>
+                     </a>
+                  </div>
+
+                  <div class="card disabled">
+                     <h3>Контакты <i>(в разработке)</i></h3>
+                     <p>
+                        Страница контактов.
+                     </p>
+                     <a href="#" class="btn" target="_blank">
+                        <span>Открыть</span>
+                     </a>
+                  </div>
+
                </div>
+
             </div>
 
-         </section>
+            <div class="section">
+
+               <h2 class="section-title">
+                  💬 Попапы
+               </h2>
+
+               <div class="grid">
+
+                  <div class="card">
+                     <h3>Форма заявки</h3>
+                     <button class="btn -outline open-popup" data-popup="request-popup">
+                        <span>Открыть</span>
+                     </button>
+                  </div>
+
+                  <div class="card">
+                     <h3>Отлик на вакансию</h3>
+                     <button class="btn -outline open-popup" data-popup="vacancy-popup">
+                        <span>Открыть</span>
+                     </button>
+                  </div>
+
+                  <div class="card">
+                     <h3>Успешная отправка</h3>
+                     <button class="btn  -outline open-popup" data-popup="thanks-popup">
+                        <span>Открыть</span>
+                     </button>
+                  </div>
+
+               </div>
+
+            </div>
+
+
+            <div class="note">
+               <strong>Подсказка:</strong><br>
+               Это служебная страница для проверки верстки. Здесь можно быстро открыть любую страницу проекта, проверить
+               попапы,
+               формы и другие элементы без необходимости переходить по сайту.
+            </div>
+
+            <div class="dev-footer">
+               Project Preview • Версия для тестирования
+            </div>
+
+         </div>
       </main>
       <footer class="footer">
    <div class="footer__body container">

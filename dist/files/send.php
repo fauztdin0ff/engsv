@@ -145,6 +145,36 @@ try {
     ';
 
     /*======================================================================
+    Прикрепление файла
+    ======================================================================*/
+
+   if (isset($_FILES['file']) && $_FILES['file']['error'] !== UPLOAD_ERR_NO_FILE) {
+
+      if ($_FILES['file']['error'] !== UPLOAD_ERR_OK) {
+         throw new Exception('Ошибка загрузки файла.');
+      }
+
+      $maxFileSize = 10 * 1024 * 1024; // 10 МБ
+
+      if ($_FILES['file']['size'] > $maxFileSize) {
+         throw new Exception('Размер файла не должен превышать 10 МБ.');
+      }
+
+      $allowedExtensions = ['pdf', 'doc', 'docx'];
+
+      $extension = strtolower(pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION));
+
+      if (!in_array($extension, $allowedExtensions, true)) {
+         throw new Exception('Допустимы только файлы PDF, DOC и DOCX.');
+      }
+
+      $mail->addAttachment(
+         $_FILES['file']['tmp_name'],
+         $_FILES['file']['name']
+      );
+   }
+
+    /*======================================================================
     Отправка
     ======================================================================*/
 
@@ -156,7 +186,7 @@ try {
 } catch (Exception $e) {
 
     http_response_code(500);
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
+    echo $mail->ErrorInfo ?: $e->getMessage();
 
 }
 
