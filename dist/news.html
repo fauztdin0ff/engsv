@@ -57,171 +57,6 @@
    <link rel="stylesheet" href="css/style.min.css?_v=20260914150242">
 </head>
 
-<style>
-   main {
-      padding-top: 160px;
-   }
-
-   h1 {
-      font-size: 38px;
-      margin-bottom: 10px;
-      color: #fff;
-   }
-
-   .subtitle {
-      color: #6b7280;
-      margin-bottom: 40px;
-   }
-
-   .section {
-      background: #fff;
-      padding: 50px 30px;
-      margin-bottom: 30px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
-   }
-
-   .section-title {
-      font-size: 22px;
-      margin-bottom: 25px;
-   }
-
-   .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 18px;
-   }
-
-   .grid-m {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 18px;
-   }
-
-   .card .callback__form-area {
-      flex: 0;
-   }
-
-   .card {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      background: #f8fafc;
-      border: 1px solid #e5e7eb;
-      padding: 20px;
-      transition: .25s;
-      position: relative;
-   }
-
-   .card.disabled {
-      opacity: 0.7;
-      pointer-events: none;
-   }
-
-   .card.disabled .btn {
-      background: #ccc !important;
-      border-color: #ccc !important;
-   }
-
-   .card.disabled h3 i {
-      font-style: normal;
-      color: #374151;
-      font-weight: 400;
-      font-size: 0.6em;
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      z-index: 5;
-   }
-
-   .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, .08);
-   }
-
-   .card h3 {
-      font-size: 18px;
-   }
-
-   .card h3 span {
-      display: block;
-      font-size: 0.7em;
-      margin-top: 5px;
-      text-decoration: underline;
-      color: #385388;
-      font-weight: 400;
-   }
-
-   .card p {
-      color: #6b7280;
-      font-size: 14px;
-      line-height: 1.5;
-      flex: 1;
-   }
-
-   .btn {
-      padding: 8px 16px;
-   }
-
-   .-outline {
-      background: #fff !important;
-      color: var(--color-text);
-      border: 1px solid var(--color-text) !important;
-   }
-
-   .-outline::before,
-   .-outline::after,
-   .-outline span::before,
-   .-outline span::after {
-      border-color: var(--color-primary) !important;
-   }
-
-   @media (hover: hover) {
-      .-outline:hover {
-         background: var(--color-primary) !important;
-         color: #fff !important;
-         border-color: var(--color-primary) !important;
-      }
-   }
-
-   .note {
-      background: #eff6ff;
-      border-left: 6px solid #e80004;
-      padding: 18px;
-      border-radius: 10px;
-      color: #374151;
-      line-height: 1.6;
-   }
-
-   .dev-footer {
-      text-align: center;
-      color: #94a3b8;
-      margin-top: 40px;
-      font-size: 14px;
-   }
-
-   @media(max-width:768px) {
-      body {
-         padding: 30px 15px;
-      }
-
-      h1 {
-         font-size: 30px;
-      }
-
-      .section {
-         padding: 20px;
-      }
-
-      main {
-         padding-top: 100px;
-      }
-
-      .grid-m {
-         grid-template-columns: 1fr;
-      }
-   }
-</style>
-
 <body>
    <div class="wrapper">
       <header class="header">
@@ -489,339 +324,398 @@
    </nav>
 </header>
       <main>
-         <div class="container">
-
-            <h1> Project Preview</h1>
-            <p class="subtitle">
-               Страницы проекта и элементы для быстрого тестирования.
-            </p>
-
-            <div class="section">
-
-               <h2 class="section-title">
-                  📄 Страницы
-               </h2>
-
-               <div class="grid">
-
-                  <div class="card">
-                     <h3>Главная
-                        <span>index.html</span>
-                     </h3>
-                     <p>
-                        Основная страница сайта.
-                     </p>
-                     <a href="index.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card">
-                     <h3>О компании
-                        <span>about.html</span>
-                     </h3>
-                     <p>
-                        Страница о компании.
-                     </p>
-                     <a href="about.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card">
-                     <h3>Услуги
-                        <span>services.html</span>
-                     </h3>
-                     <p>
-                        Страница каталога услуг.
-                     </p>
-                     <a href="services.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card">
-                     <h3>Услуги детальная
-                        <span>service.html</span>
-                     </h3>
-                     <p>
-                        Детальная информация об услуге (вар. 1).
-                     </p>
-                     <a href="service.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card">
-                     <h3>Услуги детальная
-                        <span>service-2.html</span>
-                     </h3>
-                     <p>
-                        Детальная информация об услуге (вар. 2).
-                     </p>
-                     <a href="service-2.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card">
-                     <h3>Отрасли
-                        <span>industries.html</span>
-                     </h3>
-                     <p>
-                        Страница отраслей.
-                     </p>
-                     <a href="industries.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card">
-                     <h3>Отрасли детальная
-                        <span>industry.html</span>
-                     </h3>
-                     <p>
-                        Детальная страница отрасли.
-                     </p>
-                     <a href="industry.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card">
-                     <h3>Проекты
-                        <span>projects.html</span>
-                     </h3>
-                     <p>
-                        Каталог проектов.
-                     </p>
-                     <a href="projects.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card">
-                     <h3>Страница проекта
-                        <span>project.html</span>
-                     </h3>
-                     <p>
-                        Детальная страница проекта.
-                     </p>
-                     <a href="project.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card">
-                     <h3>Новости
-                        <span>news.html</span>
-                     </h3>
-                     <p>
-                        Страница новостей и блога
-                     </p>
-                     <a href="news.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card disabled">
-                     <h3>Страница статьи <i>(в разработке)</i></h3>
-                     <p>
-                        Детальная страница статьи.
-                     </p>
-                     <a href="#" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card disabled">
-                     <h3>Карьера <i>(в разработке)</i></h3>
-                     <p>
-                        Общая страница вакансий.
-                     </p>
-                     <a href="#" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card disabled">
-                     <h3>Вакансия <i>(в разработке)</i></h3>
-                     <p>
-                        Детальная страница вакансии.
-                     </p>
-                     <a href="#" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card disabled">
-                     <h3>Контакты <i>(в разработке)</i></h3>
-                     <p>
-                        Страница контактов.
-                     </p>
-                     <a href="#" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
+         <section class="page-hero single -news">
+            <div class="page-hero__body">
+               <nav class="breadcrumbs">
+                  <ul class="breadcrumbs__list">
+                     <li class="breadcrumbs__item">
+                        <a href="" class="breadcrumbs__link">Главная</a>
+                     </li>
+                     <li class="breadcrumbs__item">
+                        <span class="breadcrumbs__current">Новости</span>
+                     </li>
+                  </ul>
+               </nav>
+               <h1 class="page-hero__title fade-up">
+                  Новости
+               </h1>
+               <div class="page-hero__subtitle fade-up">
+                  Следите за последними событиями <br> и достижениями ENGSV
                </div>
-
             </div>
+            <div class="page-hero__image">
+               <img src="img/hero-9.avif" width="1920" height="804" alt="image">
+            </div>
+            <div class="page-hero__net">
+               <picture>
+                  <source media="(max-width:767px)" srcset="img/hero-net-serv-2.svg">
+                  <source media="(max-width:999px)" srcset="img/net-single.svg">
+                  <img src="img/single-net.svg" width="1860" height="620" alt="net">
+               </picture>
+            </div>
+            <div class="page-hero__cover"></div>
+         </section>
 
-            <div class="section">
-
-               <h2 class="section-title">
-                  💬 Попапы
-               </h2>
-
-               <div class="grid">
-
-                  <div class="card">
-                     <h3>Форма заявки</h3>
-                     <button class="btn -outline open-popup" data-popup="request-popup">
-                        <span>Открыть</span>
-                     </button>
+         <section class="articles">
+            <div class="articles__body container">
+               <div class="articles__head">
+                  <div class="articles__filters">
+                     <div class="articles__filter">
+                        <a href="" class="btn -black"><span>Проекты</span></a>
+                     </div>
+                     <div class="articles__filter">
+                        <a href="" class="btn -black"><span>Достижения</span></a>
+                     </div>
+                     <div class="articles__filter">
+                        <a href="" class="btn -black"><span>Отрасль</span></a>
+                     </div>
+                     <div class="articles__filter">
+                        <a href="" class="btn -black"><span>События</span></a>
+                     </div>
                   </div>
-
-                  <div class="card">
-                     <h3>Отлик на вакансию</h3>
-                     <button class="btn -outline open-popup" data-popup="vacancy-popup">
-                        <span>Открыть</span>
-                     </button>
-                  </div>
-
-                  <div class="card">
-                     <h3>Успешная отправка</h3>
-                     <button class="btn  -outline open-popup" data-popup="thanks-popup">
-                        <span>Открыть</span>
-                     </button>
-                  </div>
-
                </div>
-
-            </div>
-
-            <div class="section">
-
-               <h2 class="section-title">
-                  🔹 UI Kit
-               </h2>
-
-               <div class="grid-m">
-
-                  <div class="card">
-                     <h3>input</h3>
-                     <div class="callback__form-area field">
-                        <label for="company">Компания</label>
-                        <input type="text" id="company" name="company" class="input">
-                     </div>
-                  </div>
-
-                  <div class="card">
-                     <h3>textarea</h3>
-                     <div class="callback__form-area field">
-                        <label for="message">Сообщение</label>
-                        <textarea id="message" name="message" class="textarea"></textarea>
-                     </div>
-                  </div>
-
-                  <div class="card">
-                     <h3>Выпадающий список</h3>
-                     <div class="dropdown">
-                        <button type="button" class="dropdown__button">
-                           Выпадающий список
-                           <svg>
-                              <use xlink:href="img/icons/icons.svg#icon-chevron"></use>
-                           </svg>
-                        </button>
-                        <ul class="dropdown__menu" data-lenis-prevent>
-                           <li class="dropdown__menu-item">
-                              <label class="custom-checkbox">
-                                 <input type="checkbox" name="" value="">
-                                 <span class="custom-checkbox__text">Элемент списка</span>
-                                 <span class="custom-checkbox__box"></span>
-                              </label>
-                           </li>
-                           <li class="dropdown__menu-item">
-                              <label class="custom-checkbox">
-                                 <input type="checkbox" name="" value="">
-                                 <span class="custom-checkbox__text">Элемент списка</span>
-                                 <span class="custom-checkbox__box"></span>
-                              </label>
-                           </li>
-                           <li class="dropdown__menu-item">
-                              <label class="custom-checkbox">
-                                 <input type="checkbox" name="" value="">
-                                 <span class="custom-checkbox__text">Элемент списка</span>
-                                 <span class="custom-checkbox__box"></span>
-                              </label>
-                           </li>
-                           <li class="dropdown__menu-item">
-                              <label class="custom-checkbox">
-                                 <input type="checkbox" name="" value="">
-                                 <span class="custom-checkbox__text">Элемент списка</span>
-                                 <span class="custom-checkbox__box"></span>
-                              </label>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-
-                  <div class="card">
-                     <h3>Checkbox</h3>
-                     <label class="custom-checkbox">
-                        <input type="checkbox" name="" value="">
-                        <span class="custom-checkbox__text">Выбрать элемент</span>
-                        <span class="custom-checkbox__box"></span>
-                     </label>
-                  </div>
-
-                  <div class="card">
-                     <h3>Кнопки</h3>
-                     <button type="button" class="btn"><span>Кнопка 1</span></button>
-                     <button type="button" class="btn -outline"><span>Кнопка 2</span></button>
-                     <button type="button" class="btn -black"><span>Кнопка 3</span></button>
-                     <br>
-                     <a href="" class="control__slide-link arrow-link">
-                        Подробнее
-                        <div class="arrow-link__icon">
-                           <svg>
-                              <use xlink:href="img/icons/icons.svg#icon-arrow-long"></use>
-                           </svg>
+               <div class="articles__content">
+                  <div class="articles__cards">
+                     <a href="" class="article-card">
+                        <div class="article-card__wrapper">
+                           <div class="article-card__image">
+                              <img src="img/articles/article-1.avif" width="540" height="360" alt="image">
+                           </div>
+                           <div class="article-card__info">
+                              <div class="article-card__category">Новые проекты</div>
+                              <div class="article-card__name">Инжиниринговые компании усиливают контроль сроков
+                                 на промышленных стройках</div>
+                              <div class="article-card__text">
+                                 Российские инжиниринговые компании отмечают рост спроса на услуги
+                                 строительного супервижна при реализации промышленных
+                                 объектов. Заказчики все чаще привлекают независимых специалистов для контроля
+                                 качества работ и соблюдения графиков
+                                 строительства. Это позволяет снижать риски дополнительных затрат на поздних
+                                 этапах проекта.
+                              </div>
+                              <div class="article-card__footer">
+                                 <div class="article-card__link arrow-link">
+                                    Подробнее
+                                    <div class="arrow-link__icon">
+                                       <svg>
+                                          <use xlink:href="img/icons/icons.svg#icon-arrow-long"></use>
+                                       </svg>
+                                    </div>
+                                 </div>
+                                 <div class="article-card__date">27.07.2026</div>
+                              </div>
+                           </div>
+                           <div class="corners">
+                              <span class="corner corner-1"></span>
+                              <span class="corner corner-2"></span>
+                              <span class="corner corner-3"></span>
+                              <span class="corner corner-4"></span>
+                           </div>
                         </div>
                      </a>
-                     <br>
-                     <div class="slider-buttons">
-                        <button type="button" class="slider-prev" aria-label="Предыдущий слайд">
-                           <svg>
-                              <use xlink:href="img/icons/icons.svg#icon-arrow-left"></use>
-                           </svg>
-                        </button>
-                        <button type="button" class="slider-next" aria-label="Следующий слайд">
-                           <svg>
-                              <use xlink:href="img/icons/icons.svg#icon-arrow-right"></use>
-                           </svg>
-                        </button>
-                     </div>
+
+                     <a href="" class="article-card">
+                        <div class="article-card__wrapper">
+                           <div class="article-card__image">
+                              <img src="img/articles/article-2.avif" width="540" height="360" alt="image">
+                           </div>
+                           <div class="article-card__info">
+                              <div class="article-card__category">Открытие офисов</div>
+                              <div class="article-card__name">Цифровые инструменты становятся стандартом
+                                 в строительном супервижне</div>
+                              <div class="article-card__text">Участники рынка внедряют мобильные приложения
+                                 и цифровые системы отчетности для мониторинга строительных площадок.
+                                 Специалисты супервижна получают возможность оперативно фиксировать замечания
+                                 и отслеживать их устранение в режиме
+                                 реального времени.</div>
+                              <div class="article-card__footer">
+                                 <div class="article-card__link arrow-link">
+                                    Подробнее
+                                    <div class="arrow-link__icon">
+                                       <svg>
+                                          <use xlink:href="img/icons/icons.svg#icon-arrow-long"></use>
+                                       </svg>
+                                    </div>
+                                 </div>
+                                 <div class="article-card__date">13.05.2026</div>
+                              </div>
+                           </div>
+                           <div class="corners">
+                              <span class="corner corner-1"></span>
+                              <span class="corner corner-2"></span>
+                              <span class="corner corner-3"></span>
+                              <span class="corner corner-4"></span>
+                           </div>
+                        </div>
+                     </a>
+
+                     <a href="" class="article-card">
+                        <div class="article-card__wrapper">
+                           <div class="article-card__image">
+                              <img src="img/articles/article-3.avif" width="540" height="360" alt="image">
+                           </div>
+                           <div class="article-card__info">
+                              <div class="article-card__category">Выставки</div>
+                              <div class="article-card__name">Спрос на технический надзор растет <br>
+                                 в инфраструктурных проектах</div>
+                              <div class="article-card__text">В крупных инфраструктурных проектах России
+                                 увеличивается объем работ, связанных с инженерным сопровождением и техническим
+                                 надзором. Особое внимание уделяется контролю качества материалов и соблюдению
+                                 требований проектной
+                                 документации. По мнению представителей отрасли, роль супервижна будет только
+                                 возрастать на фоне усложнения строительных
+                                 объектов.</div>
+                              <div class="article-card__footer">
+                                 <div class="article-card__link arrow-link">
+                                    Подробнее
+                                    <div class="arrow-link__icon">
+                                       <svg>
+                                          <use xlink:href="img/icons/icons.svg#icon-arrow-long"></use>
+                                       </svg>
+                                    </div>
+                                 </div>
+                                 <div class="article-card__date">16.01.2026</div>
+                              </div>
+                           </div>
+                           <div class="corners">
+                              <span class="corner corner-1"></span>
+                              <span class="corner corner-2"></span>
+                              <span class="corner corner-3"></span>
+                              <span class="corner corner-4"></span>
+                           </div>
+                        </div>
+                     </a>
+
+                     <a href="" class="article-card">
+                        <div class="article-card__wrapper">
+                           <div class="article-card__image">
+                              <img src="img/articles/article-1.avif" width="540" height="360" alt="image">
+                           </div>
+                           <div class="article-card__info">
+                              <div class="article-card__category">Выставки</div>
+                              <div class="article-card__name">Инжиниринговые компании усиливают контроль сроков
+                                 на промышленных стройках</div>
+                              <div class="article-card__text">
+                                 Российские инжиниринговые компании отмечают рост спроса на услуги
+                                 строительного супервижна при реализации промышленных
+                                 объектов. Заказчики все чаще привлекают независимых специалистов для контроля
+                                 качества работ и соблюдения графиков
+                                 строительства. Это позволяет снижать риски дополнительных затрат на поздних
+                                 этапах проекта.
+                              </div>
+                              <div class="article-card__footer">
+                                 <div class="article-card__link arrow-link">
+                                    Подробнее
+                                    <div class="arrow-link__icon">
+                                       <svg>
+                                          <use xlink:href="img/icons/icons.svg#icon-arrow-long"></use>
+                                       </svg>
+                                    </div>
+                                 </div>
+                                 <div class="article-card__date">27.07.2026</div>
+                              </div>
+                           </div>
+                           <div class="corners">
+                              <span class="corner corner-1"></span>
+                              <span class="corner corner-2"></span>
+                              <span class="corner corner-3"></span>
+                              <span class="corner corner-4"></span>
+                           </div>
+                        </div>
+                     </a>
+
+                     <a href="" class="article-card">
+                        <div class="article-card__wrapper">
+                           <div class="article-card__image">
+                              <img src="img/articles/article-1.avif" width="540" height="360" alt="image">
+                           </div>
+                           <div class="article-card__info">
+                              <div class="article-card__category">Новые проекты</div>
+                              <div class="article-card__name">Инжиниринговые компании усиливают контроль сроков
+                                 на промышленных стройках</div>
+                              <div class="article-card__text">
+                                 Российские инжиниринговые компании отмечают рост спроса на услуги
+                                 строительного супервижна при реализации промышленных
+                                 объектов. Заказчики все чаще привлекают независимых специалистов для контроля
+                                 качества работ и соблюдения графиков
+                                 строительства. Это позволяет снижать риски дополнительных затрат на поздних
+                                 этапах проекта.
+                              </div>
+                              <div class="article-card__footer">
+                                 <div class="article-card__link arrow-link">
+                                    Подробнее
+                                    <div class="arrow-link__icon">
+                                       <svg>
+                                          <use xlink:href="img/icons/icons.svg#icon-arrow-long"></use>
+                                       </svg>
+                                    </div>
+                                 </div>
+                                 <div class="article-card__date">27.07.2026</div>
+                              </div>
+                           </div>
+                           <div class="corners">
+                              <span class="corner corner-1"></span>
+                              <span class="corner corner-2"></span>
+                              <span class="corner corner-3"></span>
+                              <span class="corner corner-4"></span>
+                           </div>
+                        </div>
+                     </a>
+
+                     <a href="" class="article-card">
+                        <div class="article-card__wrapper">
+                           <div class="article-card__image">
+                              <img src="img/articles/article-2.avif" width="540" height="360" alt="image">
+                           </div>
+                           <div class="article-card__info">
+                              <div class="article-card__category">Открытие офисов</div>
+                              <div class="article-card__name">Цифровые инструменты становятся стандартом
+                                 в строительном супервижне</div>
+                              <div class="article-card__text">Участники рынка внедряют мобильные приложения
+                                 и цифровые системы отчетности для мониторинга строительных площадок.
+                                 Специалисты супервижна получают возможность оперативно фиксировать замечания
+                                 и отслеживать их устранение в режиме
+                                 реального времени.</div>
+                              <div class="article-card__footer">
+                                 <div class="article-card__link arrow-link">
+                                    Подробнее
+                                    <div class="arrow-link__icon">
+                                       <svg>
+                                          <use xlink:href="img/icons/icons.svg#icon-arrow-long"></use>
+                                       </svg>
+                                    </div>
+                                 </div>
+                                 <div class="article-card__date">13.05.2026</div>
+                              </div>
+                           </div>
+                           <div class="corners">
+                              <span class="corner corner-1"></span>
+                              <span class="corner corner-2"></span>
+                              <span class="corner corner-3"></span>
+                              <span class="corner corner-4"></span>
+                           </div>
+                        </div>
+                     </a>
+
+                     <a href="" class="article-card">
+                        <div class="article-card__wrapper">
+                           <div class="article-card__image">
+                              <img src="img/articles/article-3.avif" width="540" height="360" alt="image">
+                           </div>
+                           <div class="article-card__info">
+                              <div class="article-card__category">Открытие офисов</div>
+                              <div class="article-card__name">Спрос на технический надзор растет <br>
+                                 в инфраструктурных проектах</div>
+                              <div class="article-card__text">В крупных инфраструктурных проектах России
+                                 увеличивается объем работ, связанных с инженерным сопровождением и техническим
+                                 надзором. Особое внимание уделяется контролю качества материалов и соблюдению
+                                 требований проектной
+                                 документации. По мнению представителей отрасли, роль супервижна будет только
+                                 возрастать на фоне усложнения строительных
+                                 объектов.</div>
+                              <div class="article-card__footer">
+                                 <div class="article-card__link arrow-link">
+                                    Подробнее
+                                    <div class="arrow-link__icon">
+                                       <svg>
+                                          <use xlink:href="img/icons/icons.svg#icon-arrow-long"></use>
+                                       </svg>
+                                    </div>
+                                 </div>
+                                 <div class="article-card__date">16.01.2026</div>
+                              </div>
+                           </div>
+                           <div class="corners">
+                              <span class="corner corner-1"></span>
+                              <span class="corner corner-2"></span>
+                              <span class="corner corner-3"></span>
+                              <span class="corner corner-4"></span>
+                           </div>
+                        </div>
+                     </a>
+
+                     <a href="" class="article-card">
+                        <div class="article-card__wrapper">
+                           <div class="article-card__image">
+                              <img src="img/articles/article-1.avif" width="540" height="360" alt="image">
+                           </div>
+                           <div class="article-card__info">
+                              <div class="article-card__category">Новые проекты</div>
+                              <div class="article-card__name">Инжиниринговые компании усиливают контроль сроков
+                                 на промышленных стройках</div>
+                              <div class="article-card__text">
+                                 Российские инжиниринговые компании отмечают рост спроса на услуги
+                                 строительного супервижна при реализации промышленных
+                                 объектов. Заказчики все чаще привлекают независимых специалистов для контроля
+                                 качества работ и соблюдения графиков
+                                 строительства. Это позволяет снижать риски дополнительных затрат на поздних
+                                 этапах проекта.
+                              </div>
+                              <div class="article-card__footer">
+                                 <div class="article-card__link arrow-link">
+                                    Подробнее
+                                    <div class="arrow-link__icon">
+                                       <svg>
+                                          <use xlink:href="img/icons/icons.svg#icon-arrow-long"></use>
+                                       </svg>
+                                    </div>
+                                 </div>
+                                 <div class="article-card__date">27.07.2026</div>
+                              </div>
+                           </div>
+                           <div class="corners">
+                              <span class="corner corner-1"></span>
+                              <span class="corner corner-2"></span>
+                              <span class="corner corner-3"></span>
+                              <span class="corner corner-4"></span>
+                           </div>
+                        </div>
+                     </a>
+
+                     <a href="" class="article-card">
+                        <div class="article-card__wrapper">
+                           <div class="article-card__image">
+                              <img src="img/articles/article-1.avif" width="540" height="360" alt="image">
+                           </div>
+                           <div class="article-card__info">
+                              <div class="article-card__category">Выставки</div>
+                              <div class="article-card__name">Инжиниринговые компании усиливают контроль сроков
+                                 на промышленных стройках</div>
+                              <div class="article-card__text">
+                                 Российские инжиниринговые компании отмечают рост спроса на услуги
+                                 строительного супервижна при реализации промышленных
+                                 объектов. Заказчики все чаще привлекают независимых специалистов для контроля
+                                 качества работ и соблюдения графиков
+                                 строительства. Это позволяет снижать риски дополнительных затрат на поздних
+                                 этапах проекта.
+                              </div>
+                              <div class="article-card__footer">
+                                 <div class="article-card__link arrow-link">
+                                    Подробнее
+                                    <div class="arrow-link__icon">
+                                       <svg>
+                                          <use xlink:href="img/icons/icons.svg#icon-arrow-long"></use>
+                                       </svg>
+                                    </div>
+                                 </div>
+                                 <div class="article-card__date">27.07.2026</div>
+                              </div>
+                           </div>
+                           <div class="corners">
+                              <span class="corner corner-1"></span>
+                              <span class="corner corner-2"></span>
+                              <span class="corner corner-3"></span>
+                              <span class="corner corner-4"></span>
+                           </div>
+                        </div>
+                     </a>
+
                   </div>
-
                </div>
-
             </div>
 
+         </section>
 
-            <div class="note">
-               <strong>Подсказка:</strong><br>
-               Это служебная страница для проверки верстки. Здесь можно быстро открыть любую страницу проекта, проверить
-               попапы,
-               формы и другие элементы без необходимости переходить по сайту.
-            </div>
-
-            <div class="dev-footer">
-               Project Preview • Версия для тестирования
-            </div>
-
-         </div>
       </main>
       <footer class="footer">
    <div class="footer__body container">
@@ -1169,6 +1063,7 @@
    </button>
 </div>
    
+
 
    <script src="js/app.js?_v=20260914150242"></script>
    <script src="js/send.js?_v=20260914150242"></script>

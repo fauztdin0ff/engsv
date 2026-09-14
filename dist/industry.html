@@ -57,171 +57,6 @@
    <link rel="stylesheet" href="css/style.min.css?_v=20260914150242">
 </head>
 
-<style>
-   main {
-      padding-top: 160px;
-   }
-
-   h1 {
-      font-size: 38px;
-      margin-bottom: 10px;
-      color: #fff;
-   }
-
-   .subtitle {
-      color: #6b7280;
-      margin-bottom: 40px;
-   }
-
-   .section {
-      background: #fff;
-      padding: 50px 30px;
-      margin-bottom: 30px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
-   }
-
-   .section-title {
-      font-size: 22px;
-      margin-bottom: 25px;
-   }
-
-   .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 18px;
-   }
-
-   .grid-m {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 18px;
-   }
-
-   .card .callback__form-area {
-      flex: 0;
-   }
-
-   .card {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      background: #f8fafc;
-      border: 1px solid #e5e7eb;
-      padding: 20px;
-      transition: .25s;
-      position: relative;
-   }
-
-   .card.disabled {
-      opacity: 0.7;
-      pointer-events: none;
-   }
-
-   .card.disabled .btn {
-      background: #ccc !important;
-      border-color: #ccc !important;
-   }
-
-   .card.disabled h3 i {
-      font-style: normal;
-      color: #374151;
-      font-weight: 400;
-      font-size: 0.6em;
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      z-index: 5;
-   }
-
-   .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, .08);
-   }
-
-   .card h3 {
-      font-size: 18px;
-   }
-
-   .card h3 span {
-      display: block;
-      font-size: 0.7em;
-      margin-top: 5px;
-      text-decoration: underline;
-      color: #385388;
-      font-weight: 400;
-   }
-
-   .card p {
-      color: #6b7280;
-      font-size: 14px;
-      line-height: 1.5;
-      flex: 1;
-   }
-
-   .btn {
-      padding: 8px 16px;
-   }
-
-   .-outline {
-      background: #fff !important;
-      color: var(--color-text);
-      border: 1px solid var(--color-text) !important;
-   }
-
-   .-outline::before,
-   .-outline::after,
-   .-outline span::before,
-   .-outline span::after {
-      border-color: var(--color-primary) !important;
-   }
-
-   @media (hover: hover) {
-      .-outline:hover {
-         background: var(--color-primary) !important;
-         color: #fff !important;
-         border-color: var(--color-primary) !important;
-      }
-   }
-
-   .note {
-      background: #eff6ff;
-      border-left: 6px solid #e80004;
-      padding: 18px;
-      border-radius: 10px;
-      color: #374151;
-      line-height: 1.6;
-   }
-
-   .dev-footer {
-      text-align: center;
-      color: #94a3b8;
-      margin-top: 40px;
-      font-size: 14px;
-   }
-
-   @media(max-width:768px) {
-      body {
-         padding: 30px 15px;
-      }
-
-      h1 {
-         font-size: 30px;
-      }
-
-      .section {
-         padding: 20px;
-      }
-
-      main {
-         padding-top: 100px;
-      }
-
-      .grid-m {
-         grid-template-columns: 1fr;
-      }
-   }
-</style>
-
 <body>
    <div class="wrapper">
       <header class="header">
@@ -489,339 +324,310 @@
    </nav>
 </header>
       <main>
-         <div class="container">
-
-            <h1> Project Preview</h1>
-            <p class="subtitle">
-               Страницы проекта и элементы для быстрого тестирования.
-            </p>
-
-            <div class="section">
-
-               <h2 class="section-title">
-                  📄 Страницы
-               </h2>
-
-               <div class="grid">
-
-                  <div class="card">
-                     <h3>Главная
-                        <span>index.html</span>
-                     </h3>
-                     <p>
-                        Основная страница сайта.
-                     </p>
-                     <a href="index.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card">
-                     <h3>О компании
-                        <span>about.html</span>
-                     </h3>
-                     <p>
-                        Страница о компании.
-                     </p>
-                     <a href="about.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card">
-                     <h3>Услуги
-                        <span>services.html</span>
-                     </h3>
-                     <p>
-                        Страница каталога услуг.
-                     </p>
-                     <a href="services.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card">
-                     <h3>Услуги детальная
-                        <span>service.html</span>
-                     </h3>
-                     <p>
-                        Детальная информация об услуге (вар. 1).
-                     </p>
-                     <a href="service.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card">
-                     <h3>Услуги детальная
-                        <span>service-2.html</span>
-                     </h3>
-                     <p>
-                        Детальная информация об услуге (вар. 2).
-                     </p>
-                     <a href="service-2.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card">
-                     <h3>Отрасли
-                        <span>industries.html</span>
-                     </h3>
-                     <p>
-                        Страница отраслей.
-                     </p>
-                     <a href="industries.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card">
-                     <h3>Отрасли детальная
-                        <span>industry.html</span>
-                     </h3>
-                     <p>
-                        Детальная страница отрасли.
-                     </p>
-                     <a href="industry.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card">
-                     <h3>Проекты
-                        <span>projects.html</span>
-                     </h3>
-                     <p>
-                        Каталог проектов.
-                     </p>
-                     <a href="projects.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card">
-                     <h3>Страница проекта
-                        <span>project.html</span>
-                     </h3>
-                     <p>
-                        Детальная страница проекта.
-                     </p>
-                     <a href="project.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card">
-                     <h3>Новости
-                        <span>news.html</span>
-                     </h3>
-                     <p>
-                        Страница новостей и блога
-                     </p>
-                     <a href="news.html" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card disabled">
-                     <h3>Страница статьи <i>(в разработке)</i></h3>
-                     <p>
-                        Детальная страница статьи.
-                     </p>
-                     <a href="#" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card disabled">
-                     <h3>Карьера <i>(в разработке)</i></h3>
-                     <p>
-                        Общая страница вакансий.
-                     </p>
-                     <a href="#" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card disabled">
-                     <h3>Вакансия <i>(в разработке)</i></h3>
-                     <p>
-                        Детальная страница вакансии.
-                     </p>
-                     <a href="#" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
-                  <div class="card disabled">
-                     <h3>Контакты <i>(в разработке)</i></h3>
-                     <p>
-                        Страница контактов.
-                     </p>
-                     <a href="#" class="btn" target="_blank">
-                        <span>Открыть</span>
-                     </a>
-                  </div>
-
+         <section class="page-hero single -industry">
+            <div class="page-hero__body">
+               <h1 class="page-hero__title fade-up">
+                  Нефть и нефтехимия
+               </h1>
+               <div class="page-hero__subtitle fade-up">
+                  Комплексный контроль качества для проектов переработки <br> нефти и производства нефтехимической
+                  продукции
                </div>
-
             </div>
+            <div class="page-hero__image">
+               <img src="img/hero-6.avif" width="1920" height="804" alt="image">
+            </div>
+            <div class="page-hero__net">
+               <picture>
+                  <source media="(max-width:767px)" srcset="img/hero-net-serv-2.svg">
+                  <img src="img/net-single.svg" width="1860" height="744" alt="net">
+               </picture>
+            </div>
+            <div class="page-hero__cover"></div>
+         </section>
 
-            <div class="section">
-
-               <h2 class="section-title">
-                  💬 Попапы
-               </h2>
-
-               <div class="grid">
-
-                  <div class="card">
-                     <h3>Форма заявки</h3>
-                     <button class="btn -outline open-popup" data-popup="request-popup">
-                        <span>Открыть</span>
-                     </button>
-                  </div>
-
-                  <div class="card">
-                     <h3>Отлик на вакансию</h3>
-                     <button class="btn -outline open-popup" data-popup="vacancy-popup">
-                        <span>Открыть</span>
-                     </button>
-                  </div>
-
-                  <div class="card">
-                     <h3>Успешная отправка</h3>
-                     <button class="btn  -outline open-popup" data-popup="thanks-popup">
-                        <span>Открыть</span>
-                     </button>
-                  </div>
-
+         <section class="about-industry">
+            <div class="about-industry__body container">
+               <div class="about-industry__col fade-up">
+                  <h2 class="about-industry__title section-title">
+                     Мы понимаем специфику нефтехимии
+                  </h2>
                </div>
-
+               <div class="about-industry__col fade-up">
+                  <div class="about-industry__text">
+                     <p>
+                        Нефтегазовая и нефтехимическая отрасль предъявляет повышенные требования к качеству
+                        оборудования, безопасности и соблюдению технологических стандартов. Ошибки на этапе
+                        производства, поставки или строительства
+                        могут привести к значительным финансовым потерям, простою объектов и критическим рискам
+                        для промышленной
+                        безопасности.
+                     </p>
+                     <p>
+                        Проекты в этой сфере отличаются высокой капиталоемкостью, сложной технологической цепочкой
+                        и участием большого
+                        количества поставщиков по всему миру. Это требует строгого контроля качества навсех этапах —
+                        от выбора производителя
+                        до ввода объекта в эксплуатацию.
+                     </p>
+                     <p>
+                        ENGSV обладает практическим опытом работы на крупнейших нефтегазовых и нефтехимических проектах,
+                        включая строительство
+                        газоперерабатывающих комплексов, СПГ-заводов, установок пиролиза и других высокотехнологичных
+                        объектов. Мы понимаем
+                        отраслевые стандарты, требования EPC-контрактов и специфику работы с критически важным
+                        оборудованием.
+                     </p>
+                  </div>
+               </div>
             </div>
+         </section>
 
-            <div class="section">
-
-               <h2 class="section-title">
-                  🔹 UI Kit
-               </h2>
-
-               <div class="grid-m">
-
-                  <div class="card">
-                     <h3>input</h3>
-                     <div class="callback__form-area field">
-                        <label for="company">Компания</label>
-                        <input type="text" id="company" name="company" class="input">
+         <section class="articles -industry">
+            <div class="articles__body container">
+               <div class="articles__head fade-up">
+                  <h2 class="articles__title section-title">Наши услуги<br> в нефти и нефтехимии</h2>
+                  <div class="articles__action">
+                     <div class="articles__fraction">
+                        <span class="articles__fraction-current"></span>/<span class="articles__fraction-total"></span>
                      </div>
-                  </div>
-
-                  <div class="card">
-                     <h3>textarea</h3>
-                     <div class="callback__form-area field">
-                        <label for="message">Сообщение</label>
-                        <textarea id="message" name="message" class="textarea"></textarea>
-                     </div>
-                  </div>
-
-                  <div class="card">
-                     <h3>Выпадающий список</h3>
-                     <div class="dropdown">
-                        <button type="button" class="dropdown__button">
-                           Выпадающий список
-                           <svg>
-                              <use xlink:href="img/icons/icons.svg#icon-chevron"></use>
-                           </svg>
-                        </button>
-                        <ul class="dropdown__menu" data-lenis-prevent>
-                           <li class="dropdown__menu-item">
-                              <label class="custom-checkbox">
-                                 <input type="checkbox" name="" value="">
-                                 <span class="custom-checkbox__text">Элемент списка</span>
-                                 <span class="custom-checkbox__box"></span>
-                              </label>
-                           </li>
-                           <li class="dropdown__menu-item">
-                              <label class="custom-checkbox">
-                                 <input type="checkbox" name="" value="">
-                                 <span class="custom-checkbox__text">Элемент списка</span>
-                                 <span class="custom-checkbox__box"></span>
-                              </label>
-                           </li>
-                           <li class="dropdown__menu-item">
-                              <label class="custom-checkbox">
-                                 <input type="checkbox" name="" value="">
-                                 <span class="custom-checkbox__text">Элемент списка</span>
-                                 <span class="custom-checkbox__box"></span>
-                              </label>
-                           </li>
-                           <li class="dropdown__menu-item">
-                              <label class="custom-checkbox">
-                                 <input type="checkbox" name="" value="">
-                                 <span class="custom-checkbox__text">Элемент списка</span>
-                                 <span class="custom-checkbox__box"></span>
-                              </label>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-
-                  <div class="card">
-                     <h3>Checkbox</h3>
-                     <label class="custom-checkbox">
-                        <input type="checkbox" name="" value="">
-                        <span class="custom-checkbox__text">Выбрать элемент</span>
-                        <span class="custom-checkbox__box"></span>
-                     </label>
-                  </div>
-
-                  <div class="card">
-                     <h3>Кнопки</h3>
-                     <button type="button" class="btn"><span>Кнопка 1</span></button>
-                     <button type="button" class="btn -outline"><span>Кнопка 2</span></button>
-                     <button type="button" class="btn -black"><span>Кнопка 3</span></button>
-                     <br>
-                     <a href="" class="control__slide-link arrow-link">
-                        Подробнее
-                        <div class="arrow-link__icon">
-                           <svg>
-                              <use xlink:href="img/icons/icons.svg#icon-arrow-long"></use>
-                           </svg>
-                        </div>
-                     </a>
-                     <br>
-                     <div class="slider-buttons">
-                        <button type="button" class="slider-prev" aria-label="Предыдущий слайд">
+                     <div class="articles__nav-sec slider-buttons">
+                        <button type="button" class="articles__nav-prev slider-prev" aria-label="Предыдущий слайд">
                            <svg>
                               <use xlink:href="img/icons/icons.svg#icon-arrow-left"></use>
                            </svg>
                         </button>
-                        <button type="button" class="slider-next" aria-label="Следующий слайд">
+                        <button type="button" class="articles__nav-next slider-next" aria-label="Следующий слайд">
                            <svg>
                               <use xlink:href="img/icons/icons.svg#icon-arrow-right"></use>
                            </svg>
                         </button>
                      </div>
                   </div>
-
                </div>
+               <div class="articles__content fade-up">
+                  <div class="articles__slider splide">
+                     <div class="splide__track">
+                        <div class="splide__list">
 
+                           <div class="splide__slide">
+                              <div class="article-card">
+                                 <div class="article-card__wrapper">
+                                    <div class="article-card__image">
+                                       <img src="img/industry-1.avif" width="540" height="360" alt="image">
+                                    </div>
+                                    <div class="article-card__info">
+                                       <div class="article-card__name">Технический аудит поставщиков</div>
+                                       <div class="article-card__text">
+                                          Проводим комплексную оценку производителей оборудования и материалов, включая
+                                          анализ производственных мощностей, системы
+                                          качества и опыта поставок для нефтегазовых и нефтехимических проектов
+                                       </div>
+                                       <div class="article-card__footer">
+                                          <div class="article-card__num"><span>01</span>/05</div>
+                                       </div>
+                                    </div>
+                                    <div class="corners">
+                                       <span class="corner corner-1"></span>
+                                       <span class="corner corner-2"></span>
+                                       <span class="corner corner-3"></span>
+                                       <span class="corner corner-4"></span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="splide__slide">
+                              <div class="article-card">
+                                 <div class="article-card__wrapper">
+                                    <div class="article-card__image">
+                                       <img src="img/industry-2.avif" width="540" height="360" alt="image">
+                                    </div>
+                                    <div class="article-card__info">
+                                       <div class="article-card__name">Инспекционный контроль технологического
+                                          оборудования</div>
+                                       <div class="article-card__text">Обеспечиваем контроль качества изготовления
+                                          сложного оборудования — реакторов, колонн, теплообменников, компрессоров
+                                          и другого критичного оснащения — на всех стадиях производства и перед
+                                          отгрузкой
+                                       </div>
+                                       <div class="article-card__footer">
+                                          <div class="article-card__num"><span>02</span>/05</div>
+                                       </div>
+                                    </div>
+                                    <div class="corners">
+                                       <span class="corner corner-1"></span>
+                                       <span class="corner corner-2"></span>
+                                       <span class="corner corner-3"></span>
+                                       <span class="corner corner-4"></span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="splide__slide">
+                              <div class="article-card">
+                                 <div class="article-card__wrapper">
+                                    <div class="article-card__image">
+                                       <img src="img/industry-3.avif" width="540" height="360" alt="image">
+                                    </div>
+                                    <div class="article-card__info">
+                                       <div class="article-card__name">Экспедайтинг для нефтехимических проектов</div>
+                                       <div class="article-card__text">Контролируем сроки изготовления и поставки
+                                          оборудования с длительным производственным циклом, своевременно выявляем
+                                          риски задержек и обеспечиваем соблюдение графиков проекта</div>
+                                       <div class="article-card__footer">
+                                          <div class="article-card__num"><span>03</span>/05</div>
+                                       </div>
+                                    </div>
+                                    <div class="corners">
+                                       <span class="corner corner-1"></span>
+                                       <span class="corner corner-2"></span>
+                                       <span class="corner corner-3"></span>
+                                       <span class="corner corner-4"></span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="splide__slide">
+                              <div class="article-card">
+                                 <div class="article-card__wrapper">
+                                    <div class="article-card__image">
+                                       <img src="img/industry-4.avif" width="540" height="360" alt="image">
+                                    </div>
+                                    <div class="article-card__info">
+                                       <div class="article-card__name">Контроль качества установок пиролиза
+                                          и полимеризации</div>
+                                       <div class="article-card__text">
+                                          Осуществляем специализированный контроль оборудования и узлов
+                                          для высокотемпературных и химически сложных процессов,
+                                          где особенно важны точность изготовления и соответствие проектным параметрам
+                                       </div>
+                                       <div class="article-card__footer">
+                                          <div class="article-card__num"><span>04</span>/05</div>
+                                       </div>
+                                    </div>
+                                    <div class="corners">
+                                       <span class="corner corner-1"></span>
+                                       <span class="corner corner-2"></span>
+                                       <span class="corner corner-3"></span>
+                                       <span class="corner corner-4"></span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="splide__slide">
+                              <div class="article-card">
+                                 <div class="article-card__wrapper">
+                                    <div class="article-card__image">
+                                       <img src="img/industry-5.avif" width="540" height="360" alt="image">
+                                    </div>
+                                    <div class="article-card__info">
+                                       <div class="article-card__name">Входной контроль на площадке НХК</div>
+                                       <div class="article-card__text">
+                                          Проверяем качество, комплектность и соответствие поставленного оборудования
+                                          и материалов при поступлении на строительную площадку, снижая риски монтажа
+                                          дефектной продукции
+                                       </div>
+                                       <div class="article-card__footer">
+                                          <div class="article-card__num"><span>05</span>/05</div>
+                                       </div>
+                                    </div>
+                                    <div class="corners">
+                                       <span class="corner corner-1"></span>
+                                       <span class="corner corner-2"></span>
+                                       <span class="corner corner-3"></span>
+                                       <span class="corner corner-4"></span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
+         </section>
 
+         <section class="callback white" id="callback">
+            <div class="callback__body container">
+               <div class="callback__info fade-up">
+                  <div class="callback__titles">
+                     <h2 class="callback__title section-title">Обсудим <br> ваш проект <br> в нефтехимии</h2>
+                  </div>
+                  <div class="callback__att">*Обязательное поле</div>
+               </div>
+               <div class="callback__content fade-up">
+                  <div class="callback__wrapper">
+                     <div class="form-wrapper">
+                        <form action="/send.php" method="POST" class="callback__form form">
 
-            <div class="note">
-               <strong>Подсказка:</strong><br>
-               Это служебная страница для проверки верстки. Здесь можно быстро открыть любую страницу проекта, проверить
-               попапы,
-               формы и другие элементы без необходимости переходить по сайту.
+                           <input type="text" name="name" style="display: none;">
+                           <input type="text" name="block" value="Обсудим ваш проект" style="display: none;">
+                           <input type="text" name="subject" value="Заявка с сайт" style="display: none;">
+                           <input type="text" name="required" value="phone" style="display: none;">
+
+                           <div class="callback__form-row">
+                              <div class="callback__form-area field required">
+                                 <label for="name">Имя</label>
+                                 <input type="text" id="name" name="lucky" class="input" autocomplete="name">
+                              </div>
+                              <div class="callback__form-area field required">
+                                 <label for="email">Email</label>
+                                 <input type="email" id="email" name="email" class="input" autocomplete="email">
+                              </div>
+                           </div>
+                           <div class="callback__form-row">
+                              <div class="callback__form-area field required">
+                                 <label for="phone">Телефон</label>
+                                 <input type="text" id="phone" name="phone" class="input" inputmode="numeric"
+                                    autocomplete="tel">
+                              </div>
+                              <div class="callback__form-area field">
+                                 <label for="company">Компания</label>
+                                 <input type="text" id="company" name="company" class="input">
+                              </div>
+                           </div>
+                           <div class="callback__form-row">
+                              <div class="callback__form-area field">
+                                 <label for="message">Сообщение</label>
+                                 <textarea id="message" name="message" class="textarea"></textarea>
+                              </div>
+                           </div>
+                           <div class="callback__actions">
+                              <div class="callback__submit">
+                                 <button type="submit" class="btn"><span>Отправить заявку</span></button>
+                              </div>
+                              <div class="callback__agree">
+                                 Нажимая на кнопку «Отправить заявку», вы даёте согласие на обработку персональных
+                                 данных
+                                 согласно <a href="privacy-policy.html">Политике персональных данных</a>
+                              </div>
+                              <div class="callback__form-att">*Обязательное поле</div>
+                           </div>
+                        </form>
+
+                        <div class="form-sending">
+                           <div class="form-sending-icon">
+                              <span class="form-loader"></span>
+                           </div>
+                           <div class="form-sending-title">Отправляем</div>
+                        </div>
+                     </div>
+                     <div class="corners">
+                        <span class="corner corner-1"></span>
+                        <span class="corner corner-2"></span>
+                        <span class="corner corner-3"></span>
+                        <span class="corner corner-4"></span>
+                     </div>
+                  </div>
+               </div>
             </div>
+         </section>
 
-            <div class="dev-footer">
-               Project Preview • Версия для тестирования
-            </div>
-
-         </div>
       </main>
       <footer class="footer">
    <div class="footer__body container">
@@ -1169,6 +975,7 @@
    </button>
 </div>
    
+
 
    <script src="js/app.js?_v=20260914150242"></script>
    <script src="js/send.js?_v=20260914150242"></script>
