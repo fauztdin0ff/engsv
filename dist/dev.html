@@ -52,9 +52,8 @@
    <meta name="twitter:image" content="https://fauztdin0ff.github.io/engsv/dist/img/fav/og-image-xl.jpg">
 
    <!-- Styles -->
-   <link rel="stylesheet" href="css/splide.min.css?_v=20260914230252">
-   <link rel="stylesheet" href="css/glightbox.min.css?_v=20260914230252">
-   <link rel="stylesheet" href="css/style.min.css?_v=20260914230252">
+   <link rel="stylesheet" href="css/splide.min.css?_v=20260916131304">
+   <link rel="stylesheet" href="css/style.min.css?_v=20260916131304">
 </head>
 
 <style>
@@ -66,6 +65,10 @@
       font-size: 38px;
       margin-bottom: 10px;
       color: #fff;
+   }
+
+   .article__text h1 {
+      color: var(--color-text);
    }
 
    .subtitle {
@@ -97,7 +100,7 @@
       gap: 18px;
    }
 
-   .card .callback__form-area {
+   .card .field {
       flex: 0;
    }
 
@@ -134,7 +137,6 @@
    }
 
    .card:hover {
-      transform: translateY(-4px);
       box-shadow: 0 15px 30px rgba(0, 0, 0, .08);
    }
 
@@ -209,7 +211,7 @@
 
    @media(max-width:768px) {
       body {
-         padding: 30px 15px;
+         padding: 0;
       }
 
       h1 {
@@ -232,7 +234,7 @@
 
 <body>
    <div class="wrapper">
-      <header class="header">
+      <header class="header ">
    <div class="header__wrapper">
       <div class="header__body container">
          <div class="header__contacts">
@@ -632,42 +634,50 @@
                      </a>
                   </div>
 
-                  <div class="card disabled">
-                     <h3>Страница статьи <i>(в разработке)</i></h3>
+                  <div class="card">
+                     <h3>Страница статьи
+                        <span>article.html</span>
+                     </h3>
                      <p>
                         Детальная страница статьи.
                      </p>
-                     <a href="#" class="btn" target="_blank">
+                     <a href="article.html" class="btn" target="_blank">
                         <span>Открыть</span>
                      </a>
                   </div>
 
-                  <div class="card disabled">
-                     <h3>Карьера <i>(в разработке)</i></h3>
+                  <div class="card">
+                     <h3>Карьера
+                        <span>career.html</span>
+                     </h3>
                      <p>
                         Общая страница вакансий.
                      </p>
-                     <a href="#" class="btn" target="_blank">
+                     <a href="career.html" class="btn" target="_blank">
                         <span>Открыть</span>
                      </a>
                   </div>
 
-                  <div class="card disabled">
-                     <h3>Вакансия <i>(в разработке)</i></h3>
+                  <div class="card">
+                     <h3>Вакансия
+                        <span>vacancy.html</span>
+                     </h3>
                      <p>
                         Детальная страница вакансии.
                      </p>
-                     <a href="#" class="btn" target="_blank">
+                     <a href="vacancy.html" class="btn" target="_blank">
                         <span>Открыть</span>
                      </a>
                   </div>
 
-                  <div class="card disabled">
-                     <h3>Контакты <i>(в разработке)</i></h3>
+                  <div class="card">
+                     <h3>Контакты
+                        <span>contacts.html</span>
+                     </h3>
                      <p>
                         Страница контактов.
                      </p>
-                     <a href="#" class="btn" target="_blank">
+                     <a href="contacts.html" class="btn" target="_blank">
                         <span>Открыть</span>
                      </a>
                   </div>
@@ -719,7 +729,7 @@
 
                   <div class="card">
                      <h3>input</h3>
-                     <div class="callback__form-area field">
+                     <div class="field">
                         <label for="company">Компания</label>
                         <input type="text" id="company" name="company" class="input">
                      </div>
@@ -727,7 +737,7 @@
 
                   <div class="card">
                      <h3>textarea</h3>
-                     <div class="callback__form-area field">
+                     <div class="field">
                         <label for="message">Сообщение</label>
                         <textarea id="message" name="message" class="textarea"></textarea>
                      </div>
@@ -776,11 +786,16 @@
                   </div>
 
                   <div class="card">
-                     <h3>Checkbox</h3>
+                     <h3>checkbox, radio</h3>
                      <label class="custom-checkbox">
                         <input type="checkbox" name="" value="">
-                        <span class="custom-checkbox__text">Выбрать элемент</span>
+                        <span class="custom-checkbox__text">Отметить элемент</span>
                         <span class="custom-checkbox__box"></span>
+                     </label>
+
+                     <label class="custom-radio">
+                        <input type="radio" name="" value="">
+                        <span class="custom-checkbox__text">Выбрать элемент</span>
                      </label>
                   </div>
 
@@ -812,6 +827,142 @@
                         </button>
                      </div>
                   </div>
+
+               </div>
+
+            </div>
+
+            <div class="section">
+
+               <h2 class="section-title">
+                  ✍️ Типография
+               </h2>
+
+               <div class="grid-s">
+
+                  <div class="article__text" style="max-width: 880px">
+
+                     <h1>Заголовок H1</h1>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad facere reprehenderit rem
+                        voluptatibus exercitationem delectus! Voluptatem voluptatibus vero error optio voluptates at
+                        eos, inventore illum! Maiores laborum nulla, in adipisci, ea similique sunt ratione recusandae
+                        impedit fuga vel. Eaque, odio.</p>
+                     <h2>Заголовок H2</h2>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad facere reprehenderit rem
+                        voluptatibus exercitationem delectus! Voluptatem voluptatibus vero error optio voluptates at
+                        eos, inventore illum! Maiores laborum nulla, in adipisci, ea similique sunt ratione recusandae
+                        impedit fuga vel. Eaque, odio.</p>
+                     <h3>Заголовок H3</h3>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad facere reprehenderit rem
+                        voluptatibus exercitationem delectus! Voluptatem voluptatibus vero error optio voluptates at
+                        eos, inventore illum! Maiores laborum nulla, in adipisci, ea similique sunt ratione recusandae
+                        impedit fuga vel. Eaque, odio.</p>
+                     <h4>Заголовок H4</h4>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad facere reprehenderit rem
+                        voluptatibus exercitationem delectus! Voluptatem voluptatibus vero error optio voluptates at
+                        eos, inventore illum! Maiores laborum nulla, in adipisci, ea similique sunt ratione recusandae
+                        impedit fuga vel. Eaque, odio.</p>
+                     <h5>Заголовок H5</h5>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad facere reprehenderit rem
+                        voluptatibus exercitationem delectus! Voluptatem voluptatibus vero error optio voluptates at
+                        eos, inventore illum! Maiores laborum nulla, in adipisci, ea similique sunt ratione recusandae
+                        impedit fuga vel. Eaque, odio.</p>
+                     <h6>Заголовок H6</h6>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad facere reprehenderit rem
+                        voluptatibus exercitationem delectus! Voluptatem voluptatibus vero error optio voluptates at
+                        eos, inventore illum! Maiores laborum nulla, in adipisci, ea similique sunt ratione recusandae
+                        impedit fuga vel. Eaque, odio.</p>
+
+                     <br>
+
+                     <p><b>Маркированный список</b></p>
+                     <ul>
+                        <li>элемент списка</li>
+                        <li>элемент списка</li>
+                        <li>элемент списка</li>
+                        <li>элемент списка</li>
+                     </ul>
+
+                     <p><b>Нумерованный список</b></p>
+                     <ol>
+                        <li>элемент списка</li>
+                        <li>элемент списка</li>
+                        <li>элемент списка</li>
+                        <li>элемент списка</li>
+                     </ol>
+
+                     <br>
+
+                     <p><b>Цитата стандартная</b></p>
+                     <blockquote>
+                        " Российские инжиниринговые компании отмечают рост спроса на услуги строительного супервижна
+                        при реализации промышленных
+                        объектов. Заказчики все чаще привлекают независимых специалистов для контроля качества работ
+                        и соблюдения графиков
+                        строительства. Это позволяет снижать риски затрат на поздних этапах проекта. "
+                     </blockquote>
+
+                     <br>
+
+                     <p><b>Figure</b></p>
+                     <figure>
+                        <img src="img/cnr-1.avif" width="881" height="495" alt="Описание изображения">
+
+                        <figcaption>
+                           Описание к изображению
+                        </figcaption>
+                     </figure>
+
+                     <br>
+                     <p><b>Таблица</b></p>
+                     <table>
+                        <caption>
+                           Основные показатели проекта
+                        </caption>
+                        <thead>
+                           <tr>
+                              <th>Показатель</th>
+                              <th>2024</th>
+                              <th>2025</th>
+                              <th>2026</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <th>Количество проектов</th>
+                              <td>24</td>
+                              <td>37</td>
+                              <td>52</td>
+                           </tr>
+                           <tr>
+                              <th>Объём инвестиций</th>
+                              <td>120 млн ₽</td>
+                              <td>185 млн ₽</td>
+                              <td>240 млн ₽</td>
+                           </tr>
+                           <tr>
+                              <th>Средний срок реализации</th>
+                              <td>14 мес.</td>
+                              <td>12 мес.</td>
+                              <td>11 мес.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+
+                     <br>
+                     <p><b>Другое</b></p>
+
+                     &lt;hr&gt;
+                     <hr>
+
+                     <b>&lt;b&gt;Жирный текст&lt;/b&gt;</b> <br>
+                     <strong>&lt;strong&gt;Важный текст&lt;/strong&gt;</strong> <br>
+                     <i>&lt;i&gt;Курсивный текст&lt;/i&gt;</i> <br>
+                     <del>&lt;del&gt;Удалённый текст&lt;/del&gt;</del> <br>
+                     <em>&lt;em&gt;Акцентированный текст&lt;/em&gt;</em>
+
+                  </div>
+
 
                </div>
 
@@ -1178,9 +1329,9 @@
 </div>
    
 
-   <script src="js/app.js?_v=20260914230252"></script>
-   <script src="js/send.js?_v=20260914230252"></script>
-   <script src="js/map.js?_v=20260914230252"></script>
+   <script src="js/app.js?_v=20260916131304"></script>
+   <script src="js/send.js?_v=20260916131304"></script>
+   <script src="js/map.js?_v=20260916131304"></script>
 </body>
 
 </html>

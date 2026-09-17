@@ -217,3 +217,96 @@ async function initMap() {
    });
 
 }
+
+/*==========================================================================
+Contacts Map
+============================================================================*/
+const contactsMap = document.querySelector('#contactsMap');
+
+let contactsMapInitialized = false;
+
+const contactsMapObserver = new IntersectionObserver(async ([entry]) => {
+
+   if (!entry.isIntersecting || contactsMapInitialized) return;
+
+   contactsMapInitialized = true;
+
+   try {
+      await loadYandexMaps();
+      initContactsMap();
+
+      contactsMapObserver.disconnect();
+   } catch (error) {
+      console.error('Yandex Maps load error:', error);
+   }
+
+}, {
+   rootMargin: '500px'
+});
+
+if (contactsMap) {
+   contactsMapObserver.observe(contactsMap);
+}
+
+
+/*==========================================================================
+Contacts Map Init
+============================================================================*/
+async function initContactsMap() {
+
+   await ymaps.ready();
+
+   const mapContainer = document.querySelector('.contacts__map');
+
+   if (!mapContainer) return;
+
+   const coords = mapContainer.dataset.coords
+      .split(',')
+      .map(Number);
+
+   const hint = mapContainer.dataset.hint;
+   const address = mapContainer.dataset.address;
+
+   const map = new ymaps.Map('contactsMap', {
+      center: coords,
+      zoom: 16,
+      controls: ['zoomControl']
+   }, {
+      minZoom: 3,
+      maxZoom: 18
+   });
+
+   map.behaviors.disable('scrollZoom');
+
+   const placemark = new ymaps.Placemark(
+      coords,
+      {
+         hintContent: hint,
+         balloonContent: address
+      },
+      {
+         iconLayout: 'default#image',
+         iconImageHref: './img/icons/map-marker.svg',
+         iconImageSize: [40, 40],
+         iconImageOffset: [-20, -20]
+      }
+   );
+
+   map.geoObjects.add(placemark);
+
+   const applyMapFilter = () => {
+
+      const groundPane = document.querySelector(
+         '.ymaps-2-1-79-ground-pane'
+      );
+
+      if (!groundPane) {
+         requestAnimationFrame(applyMapFilter);
+         return;
+      }
+
+      groundPane.style.filter = 'grayscale(90%)';
+   };
+
+   applyMapFilter();
+}
