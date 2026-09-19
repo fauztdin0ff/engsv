@@ -1,5 +1,3 @@
-let popupLightbox = null;
-
 /*==========================================================================
 Map script
 ============================================================================*/
@@ -80,14 +78,14 @@ async function initMap() {
    const popupGallery = document.querySelector('.geo__popup-gallery');
    const popupButton = document.querySelector('.geo__popup-button');
    const popupClose = document.querySelector('.geo__popup-close');
-
+   const filtersContainer = document.querySelector('.geo__filters');
+   let activeCategory = 'all';
 
    function openPopup(project) {
 
       popupTitle.textContent = project.title;
-      /* popupCategory.textContent = `${t.industry}: ${project.category}`; */
-
-
+      popupCategory.textContent = `${t.industry}: ${project.category}`;
+      popupButton.href = project.link;
       popupGallery.innerHTML = '';
 
       if (project.image) {
@@ -104,8 +102,15 @@ async function initMap() {
    function closePopup() {
       popup.classList.remove('show');
 
+      const visiblePlacemarks = placemarks.filter(item =>
+         activeCategory === 'all' ||
+         item.category === activeCategory
+      );
+
+      if (!visiblePlacemarks.length) return;
+
       const bounds = ymaps.geoQuery(
-         placemarks.map(item => item.placemark)
+         visiblePlacemarks.map(item => item.placemark)
       ).getBounds();
 
       map.setBounds(bounds, {
@@ -196,6 +201,82 @@ async function initMap() {
       closePopup();
    });
 
+
+   // =========================================================================
+   // Создание фильтров
+   // =========================================================================
+
+   const categories = [...new Set(projects.map(project => project.category))];
+
+   filtersContainer.innerHTML = `
+      <button
+         type="button"
+         class="geo__filter active"
+         data-category="all">
+         Все проекты
+      </button>
+   `;
+
+   categories.forEach(category => {
+
+      filtersContainer.insertAdjacentHTML(
+         'beforeend',
+         `
+         <button
+            type="button"
+            class="geo__filter"
+            data-category="${category}">
+            ${category}
+         </button>
+         `
+      );
+
+   });
+
+   const filterButtons = filtersContainer.querySelectorAll('.geo__filter');
+
+   filterButtons.forEach(button => {
+
+      button.addEventListener('click', () => {
+
+         filterButtons.forEach(btn => {
+            btn.classList.remove('active');
+         });
+
+         button.classList.add('active');
+
+         activeCategory = button.dataset.category;
+
+         popup.classList.remove('show');
+
+         clusterer.removeAll();
+
+         const visiblePlacemarks = placemarks.filter(item =>
+            activeCategory === 'all' ||
+            item.category === activeCategory
+         );
+
+         visiblePlacemarks.forEach(item => {
+            clusterer.add(item.placemark);
+         });
+
+         if (visiblePlacemarks.length) {
+
+            const bounds = ymaps.geoQuery(
+               visiblePlacemarks.map(item => item.placemark)
+            ).getBounds();
+
+            map.setBounds(bounds, {
+               checkZoomRange: true,
+               zoomMargin: 80,
+               duration: 500
+            });
+
+         }
+
+      });
+
+   });
 
    const bounds = ymaps.geoQuery(
       placemarks.map(item => item.placemark)

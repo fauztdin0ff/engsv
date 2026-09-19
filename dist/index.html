@@ -52,8 +52,8 @@
    <meta name="twitter:image" content="https://fauztdin0ff.github.io/engsv/dist/img/fav/og-image-xl.jpg">
 
    <!-- Styles -->
-   <link rel="stylesheet" href="css/splide.min.css?_v=20260918154516">
-   <link rel="stylesheet" href="css/style.min.css?_v=20260918154516">
+   <link rel="stylesheet" href="css/splide.min.css?_v=20260919085437">
+   <link rel="stylesheet" href="css/style.min.css?_v=20260919085437">
 </head>
 
 <body>
@@ -130,8 +130,11 @@
                </div>
             </div>
             <button type="button" class="header__toggle" id="openMenu" aria-label="Открыть меню">
-               <svg>
+               <svg class="header__toggle-burger">
                   <use xlink:href="img/icons/icons.svg#icon-burger"></use>
+               </svg>
+               <svg class="header__toggle-close">
+                  <use xlink:href="img/icons/icons.svg#icon-close"></use>
                </svg>
             </button>
          </div>
@@ -151,124 +154,208 @@
                </button>
             </div>
             <ul class="menu__list">
+
                <li class="menu__item">
                   <a href="about.html" class="menu__link">О компании</a>
                </li>
 
+               <!-- Направления деятельности -->
+
                <li class="menu__item">
-                  <button type="button" class="menu__toggle">
+
+                  <button type="button" class="menu__toggle" data-menu-target="submenu-1">
                      Направления деятельности
                      <svg>
                         <use xlink:href="img/icons/icons.svg#icon-chevron-right"></use>
                      </svg>
                   </button>
-                  <ul class="menu__submenu">
+
+                  <ul class="menu__submenu" data-menu-id="submenu-1">
+
+                     <!-- Управление качеством -->
+
                      <li class="menu__subitem">
-                        <button type="button" class="menu__toggle">
-                           Управление качеством <br> на производстве
+
+                        <button type="button" class="menu__toggle" data-menu-target="subsubmenu-1">
+                           Управление качеством <br>
+                           на производстве
+
                            <svg>
                               <use xlink:href="img/icons/icons.svg#icon-chevron-right"></use>
                            </svg>
                         </button>
-                        <ul class="menu__subsubmenu">
+
+                        <ul class="menu__subsubmenu" data-menu-id="subsubmenu-1">
                            <li class="menu__subsubitem">
-                              <a href="" class="menu__link">Технический аудит потенциальных поставщиков</a>
+                              <a href="" class="menu__link">
+                                 Технический аудит потенциальных поставщиков
+                              </a>
                            </li>
+
                            <li class="menu__subsubitem">
-                              <a href="" class="menu__link">Инспекционный контроль за изготовлением и отгрузкой</a>
+                              <a href="" class="menu__link">
+                                 Инспекционный контроль за изготовлением и отгрузкой
+                              </a>
                            </li>
+
                            <li class="menu__subsubitem">
-                              <a href="" class="menu__link">Экспедайтинг (контроль сроков производства и митигация
-                                 рисков)</a>
+                              <a href="" class="menu__link">
+                                 Экспедайтинг (контроль сроков производства и митигация рисков)
+                              </a>
                            </li>
                         </ul>
+
                      </li>
 
+
+                     <!-- Сюрвейерские услуги -->
+
                      <li class="menu__subitem">
-                        <button type="button" class="menu__toggle">Сюрвейерские услуги
+
+                        <button type="button" class="menu__toggle" data-menu-target="subsubmenu-2">
+                           Сюрвейерские услуги
+
                            <svg>
                               <use xlink:href="img/icons/icons.svg#icon-chevron-right"></use>
                            </svg>
                         </button>
-                        <ul class="menu__subsubmenu">
+
+                        <ul class="menu__subsubmenu" data-menu-id="subsubmenu-2">
                            <li class="menu__subsubitem">
                               <a href="" class="menu__link">Ссылка 1</a>
                            </li>
+
                            <li class="menu__subsubitem">
                               <a href="" class="menu__link">Ссылка 2</a>
                            </li>
+
                            <li class="menu__subsubitem">
                               <a href="" class="menu__link">Ссылка 3</a>
                            </li>
                         </ul>
+
                      </li>
 
+
+                     <!-- Управление строительством -->
+
                      <li class="menu__subitem">
-                        <button type="button" class="menu__toggle">Управление строительством
+
+                        <button type="button" class="menu__toggle" data-menu-target="subsubmenu-3">
+                           Управление строительством
+
                            <svg>
                               <use xlink:href="img/icons/icons.svg#icon-chevron-right"></use>
                            </svg>
                         </button>
-                        <ul class="menu__subsubmenu">
+
+                        <ul class="menu__subsubmenu" data-menu-id="subsubmenu-3">
                            <li class="menu__subsubitem">
                               <a href="" class="menu__link">Ссылка 1</a>
                            </li>
+
                            <li class="menu__subsubitem">
                               <a href="" class="menu__link">Ссылка 2</a>
                            </li>
+
                            <li class="menu__subsubitem">
                               <a href="" class="menu__link">Ссылка 3</a>
                            </li>
                         </ul>
+
                      </li>
 
-                     <li class="menu__subitem">
-                        <a href="" class="menu__link">Инспекция энергетических объектов</a>
-                     </li>
+
+                     <!-- Без subsubmenu -->
 
                      <li class="menu__subitem">
-                        <button type="button" class="menu__toggle">Аутсорсинг</button>
-                        <ul class="menu__subsubmenu">
+                        <a href="" class="menu__link">
+                           Инспекция энергетических объектов
+                        </a>
+                     </li>
+
+
+                     <!-- Аутсорсинг -->
+
+                     <li class="menu__subitem">
+
+                        <button type="button" class="menu__toggle" data-menu-target="subsubmenu-4">
+                           Аутсорсинг
+                        </button>
+
+                        <ul class="menu__subsubmenu" data-menu-id="subsubmenu-4">
                            <li class="menu__subsubitem">
                               <a href="" class="menu__link">Ссылка 1</a>
                            </li>
+
                            <li class="menu__subsubitem">
                               <a href="" class="menu__link">Ссылка 2</a>
                            </li>
+
                            <li class="menu__subsubitem">
                               <a href="" class="menu__link">Ссылка 3</a>
                            </li>
                         </ul>
+
+                     </li>
+
+
+                     <li class="menu__subitem">
+                        <a href="" class="menu__link">
+                           Лаборатория неразрушающего контроля
+                        </a>
                      </li>
 
                      <li class="menu__subitem">
-                        <a href="" class="menu__link">Лаборатория неразрушающего контроля</a>
+                        <a href="" class="menu__link">
+                           Лаборатория неразрушающего контроля
+                        </a>
                      </li>
+
+                     <li class="menu__subitem">
+                        <a href="" class="menu__link">
+                           Лаборатория неразрушающего контроля
+                        </a>
+                     </li>
+
                   </ul>
                </li>
 
+
+               <!-- Отрасли -->
+
                <li class="menu__item">
-                  <button type="button" class="menu__toggle">
+
+                  <button type="button" class="menu__toggle" data-menu-target="submenu-2">
                      Отрасли
+
                      <svg>
                         <use xlink:href="img/icons/icons.svg#icon-chevron-right"></use>
                      </svg>
                   </button>
-                  <ul class="menu__submenu">
+
+                  <ul class="menu__submenu" data-menu-id="submenu-2">
                      <li class="menu__subitem">
                         <a href="" class="menu__link">Ссылка 1</a>
                      </li>
+
                      <li class="menu__subitem">
                         <a href="" class="menu__link">Ссылка 2</a>
                      </li>
+
                      <li class="menu__subitem">
                         <a href="" class="menu__link">Ссылка 3</a>
                      </li>
+
                      <li class="menu__subitem">
                         <a href="" class="menu__link">Ссылка 4</a>
                      </li>
                   </ul>
+
                </li>
+
+
+               <!-- Остальные пункты -->
 
                <li class="menu__item">
                   <a href="" class="menu__link">Проекты</a>
@@ -281,7 +368,12 @@
                <li class="menu__item">
                   <a href="" class="menu__link">Контакты</a>
                </li>
+
             </ul>
+
+
+            <div class="menu__submenus"></div>
+            <div class="menu__subsubmenus"></div>
          </div>
 
          <div class="menu__button">
@@ -329,6 +421,12 @@
             <a href="tel:+74957906552" class="menu__contact">+7 (495) 790-65-52</a>
             <a href="mailto:inspection@eng-sv.ru" class="menu__contact">inspection@eng-sv.ru</a>
          </div>
+
+         <div class="separators">
+            <span class="separator separator-1"></span>
+            <span class="separator separator-2"></span>
+         </div>
+
          <div class="corners">
             <span class="corner corner-1"></span>
             <span class="corner corner-2"></span>
@@ -442,7 +540,7 @@
                         <div class="splide__track">
                            <ul class="splide__list">
                               <li class="splide__slide">
-                                 <div class="activities__item" data-slide="1">
+                                 <a href="service.html" class="activities__item" data-slide="1">
                                     <div class="activities__item-image">
                                        <img src="img/serv-2.avif" width="320" height="220" alt="image">
                                     </div>
@@ -463,11 +561,11 @@
                                           монтажом
                                        </div>
                                     </div>
-                                 </div>
+                                 </a>
                               </li>
 
                               <li class="splide__slide">
-                                 <div class="activities__item" data-slide="2">
+                                 <a href="service.html" class="activities__item" data-slide="2">
                                     <div class="activities__item-image">
                                        <img src="img/serv-4.avif" width="320" height="220" alt="image">
                                     </div>
@@ -487,11 +585,11 @@
                                           контроль количества и качества
                                        </div>
                                     </div>
-                                 </div>
+                                 </a>
                               </li>
 
                               <li class="splide__slide">
-                                 <div class="activities__item" data-slide="3">
+                                 <a href="service.html" class="activities__item" data-slide="3">
                                     <div class="activities__item-image">
                                        <img src="img/serv-5.avif" width="320" height="220" alt="image">
                                     </div>
@@ -511,11 +609,11 @@
                                           документации и нормативам
                                        </div>
                                     </div>
-                                 </div>
+                                 </a>
                               </li>
 
                               <li class="splide__slide">
-                                 <div class="activities__item" data-slide="4">
+                                 <a href="service.html" class="activities__item" data-slide="4">
                                     <div class="activities__item-image">
                                        <img src="img/serv-6.avif" width="320" height="220" alt="image">
                                     </div>
@@ -536,11 +634,11 @@
                                           безопасности и эксплуатационной надежности
                                        </div>
                                     </div>
-                                 </div>
+                                 </a>
                               </li>
 
                               <li class="splide__slide">
-                                 <div class="activities__item" data-slide="5">
+                                 <a href="service.html" class="activities__item" data-slide="5">
                                     <div class="activities__item-image">
                                        <img src="img/serv-2.avif" width="320" height="220" alt="image">
                                     </div>
@@ -560,11 +658,11 @@
                                           учёт. Организация логистики и оформление товаросопроводительной документации
                                        </div>
                                     </div>
-                                 </div>
+                                 </a>
                               </li>
 
                               <li class="splide__slide">
-                                 <div class="activities__item" data-slide="6">
+                                 <a href="service-2.html" class="activities__item" data-slide="6">
                                     <div class="activities__item-image">
                                        <img src="img/serv-4.avif" width="320" height="220" alt="image">
                                     </div>
@@ -584,7 +682,7 @@
                                           (ультразвук, радиография, магнитный контроль и др.)
                                        </div>
                                     </div>
-                                 </div>
+                                 </a>
                               </li>
 
                            </ul>
@@ -821,7 +919,7 @@
                   <div class="industry__slider splide">
                      <div class="splide__track">
                         <div class="splide__list">
-                           <div class="industry__slide splide__slide">
+                           <a href="" class="industry__slide splide__slide">
                               <div class="industry__slide-image">
                                  <img src="img/ex-1.avif" width="580" height="580" alt="image">
                               </div>
@@ -833,8 +931,8 @@
                                     сопровождение поставок и минимизацию рисков
                                     на всех этапах реализации проектов</div>
                               </div>
-                           </div>
-                           <div class="industry__slide splide__slide">
+                           </a>
+                           <a href="" class="industry__slide splide__slide">
                               <div class="industry__slide-image">
                                  <img src="img/ex-2.avif" width="580" height="580" alt="image">
                               </div>
@@ -846,8 +944,8 @@
                                     для обеспечения надежности и соблюдения
                                     международных стандартов</div>
                               </div>
-                           </div>
-                           <div class="industry__slide splide__slide">
+                           </a>
+                           <a href="" class="industry__slide splide__slide">
                               <div class="industry__slide-image">
                                  <img src="img/ex-3.avif" width="580" height="580" alt="image">
                               </div>
@@ -859,8 +957,8 @@
                                     и устойчивому развитию
                                     энергетической инфраструктуры</div>
                               </div>
-                           </div>
-                           <div class="industry__slide splide__slide">
+                           </a>
+                           <a href="" class="industry__slide splide__slide">
                               <div class="industry__slide-image">
                                  <img src="img/ex-4.avif" width="580" height="580" alt="image">
                               </div>
@@ -871,8 +969,8 @@
                                     технического надзора. Обеспечиваем соблюдение сроков, бюджета и требований
                                     к качеству</div>
                               </div>
-                           </div>
-                           <div class="industry__slide splide__slide">
+                           </a>
+                           <a href="" class="industry__slide splide__slide">
                               <div class="industry__slide-image">
                                  <img src="img/ex-5.avif" width="580" height="580" alt="image">
                               </div>
@@ -885,8 +983,8 @@
                                     грузов: cюрвей на элеваторах, терминалах, в портах, контроль при погрузке
                                     и транспортировке</div>
                               </div>
-                           </div>
-                           <div class="industry__slide splide__slide">
+                           </a>
+                           <a href="" class="industry__slide splide__slide">
                               <div class="industry__slide-image">
                                  <img src="img/ex-6.avif" width="580" height="580" alt="image">
                               </div>
@@ -897,8 +995,8 @@
                                     поставок, инспекцию грузов, экспедайтинги технический аудит для бесперебойной работы
                                     логистических систем</div>
                               </div>
-                           </div>
-                           <div class="industry__slide splide__slide">
+                           </a>
+                           <a href="" class="industry__slide splide__slide">
                               <div class="industry__slide-image">
                                  <img src="img/ex-7.avif" width="580" height="580" alt="image">
                               </div>
@@ -909,7 +1007,7 @@
                                     контроль качества оборудования для обогатительных фабрик, входной контроль
                                     на площадке</div>
                               </div>
-                           </div>
+                           </a>
                         </div>
                      </div>
                   </div>
@@ -1431,6 +1529,7 @@
                <div class="geo__subtitle section-subtitle fade-up">Реализуем проекты на территории Российской Федерации
                   и за рубежом</div>
                <div class="geo__content">
+                  <div class="geo__filters fade-up"></div>
 
                   <div class="geo__map">
                      <div id="map" class="map__canvas"></div>
@@ -1441,6 +1540,9 @@
                            <div class="geo__popup-gallery">
                               <div class="geo__popup-image"></div>
                            </div>
+                           <a href="#" class="geo__popup-button">
+                              Подробнее
+                           </a>
                         </div>
                         <button type="button" class="geo__popup-close" aria-label="закрыть">
                            <svg>
@@ -1530,7 +1632,7 @@
             </div>
          </section>
 
-         <!-- <section class="articles">
+         <section class="articles">
             <div class="articles__body container">
                <div class="articles__head fade-up">
                   <h2 class="articles__title section-title">Последние новости</h2>
@@ -1721,7 +1823,7 @@
                   </div>
                </div>
             </div>
-         </section> -->
+         </section>
 
          <section class="vacancies">
             <div class="vacancies__body container">
@@ -2614,11 +2716,20 @@
       </svg>
    </button>
 </div>
+
+<!-- cookies banner -->
+<div class="cookies">
+   <div class="cookies__text">Мы используем cookies, чтобы вам было удобнее пользоваться сайтом.</div>
+   <div class="cookies__buttons">
+      <button type="button" class="btn -outline"><span>Отклонить</span></button>
+      <button type="button" class="btn"><span>Принять</span></button>
+   </div>
+</div>
    
 
-   <script src="js/app.js?_v=20260918154516"></script>
-   <script src="js/send.js?_v=20260918154516"></script>
-   <script src="js/map.js?_v=20260918154516"></script>
+   <script src="js/app.js?_v=20260919085437"></script>
+   <script src="js/send.js?_v=20260919085437"></script>
+   <script src="js/map.js?_v=20260919085437"></script>
 </body>
 
 </html>

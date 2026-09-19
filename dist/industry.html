@@ -52,8 +52,8 @@
    <meta name="twitter:image" content="https://fauztdin0ff.github.io/engsv/dist/img/fav/og-image-xl.jpg">
 
    <!-- Styles -->
-   <link rel="stylesheet" href="css/splide.min.css?_v=20260918154516">
-   <link rel="stylesheet" href="css/style.min.css?_v=20260918154516">
+   <link rel="stylesheet" href="css/splide.min.css?_v=20260919085437">
+   <link rel="stylesheet" href="css/style.min.css?_v=20260919085437">
 </head>
 
 <body>
@@ -114,8 +114,11 @@
                </div>
             </div>
             <button type="button" class="header__toggle" id="openMenu" aria-label="Открыть меню">
-               <svg>
+               <svg class="header__toggle-burger">
                   <use xlink:href="img/icons/icons.svg#icon-burger"></use>
+               </svg>
+               <svg class="header__toggle-close">
+                  <use xlink:href="img/icons/icons.svg#icon-close"></use>
                </svg>
             </button>
          </div>
@@ -135,124 +138,208 @@
                </button>
             </div>
             <ul class="menu__list">
+
                <li class="menu__item">
                   <a href="about.html" class="menu__link">О компании</a>
                </li>
 
+               <!-- Направления деятельности -->
+
                <li class="menu__item">
-                  <button type="button" class="menu__toggle">
+
+                  <button type="button" class="menu__toggle" data-menu-target="submenu-1">
                      Направления деятельности
                      <svg>
                         <use xlink:href="img/icons/icons.svg#icon-chevron-right"></use>
                      </svg>
                   </button>
-                  <ul class="menu__submenu">
+
+                  <ul class="menu__submenu" data-menu-id="submenu-1">
+
+                     <!-- Управление качеством -->
+
                      <li class="menu__subitem">
-                        <button type="button" class="menu__toggle">
-                           Управление качеством <br> на производстве
+
+                        <button type="button" class="menu__toggle" data-menu-target="subsubmenu-1">
+                           Управление качеством <br>
+                           на производстве
+
                            <svg>
                               <use xlink:href="img/icons/icons.svg#icon-chevron-right"></use>
                            </svg>
                         </button>
-                        <ul class="menu__subsubmenu">
+
+                        <ul class="menu__subsubmenu" data-menu-id="subsubmenu-1">
                            <li class="menu__subsubitem">
-                              <a href="" class="menu__link">Технический аудит потенциальных поставщиков</a>
+                              <a href="" class="menu__link">
+                                 Технический аудит потенциальных поставщиков
+                              </a>
                            </li>
+
                            <li class="menu__subsubitem">
-                              <a href="" class="menu__link">Инспекционный контроль за изготовлением и отгрузкой</a>
+                              <a href="" class="menu__link">
+                                 Инспекционный контроль за изготовлением и отгрузкой
+                              </a>
                            </li>
+
                            <li class="menu__subsubitem">
-                              <a href="" class="menu__link">Экспедайтинг (контроль сроков производства и митигация
-                                 рисков)</a>
+                              <a href="" class="menu__link">
+                                 Экспедайтинг (контроль сроков производства и митигация рисков)
+                              </a>
                            </li>
                         </ul>
+
                      </li>
 
+
+                     <!-- Сюрвейерские услуги -->
+
                      <li class="menu__subitem">
-                        <button type="button" class="menu__toggle">Сюрвейерские услуги
+
+                        <button type="button" class="menu__toggle" data-menu-target="subsubmenu-2">
+                           Сюрвейерские услуги
+
                            <svg>
                               <use xlink:href="img/icons/icons.svg#icon-chevron-right"></use>
                            </svg>
                         </button>
-                        <ul class="menu__subsubmenu">
+
+                        <ul class="menu__subsubmenu" data-menu-id="subsubmenu-2">
                            <li class="menu__subsubitem">
                               <a href="" class="menu__link">Ссылка 1</a>
                            </li>
+
                            <li class="menu__subsubitem">
                               <a href="" class="menu__link">Ссылка 2</a>
                            </li>
+
                            <li class="menu__subsubitem">
                               <a href="" class="menu__link">Ссылка 3</a>
                            </li>
                         </ul>
+
                      </li>
 
+
+                     <!-- Управление строительством -->
+
                      <li class="menu__subitem">
-                        <button type="button" class="menu__toggle">Управление строительством
+
+                        <button type="button" class="menu__toggle" data-menu-target="subsubmenu-3">
+                           Управление строительством
+
                            <svg>
                               <use xlink:href="img/icons/icons.svg#icon-chevron-right"></use>
                            </svg>
                         </button>
-                        <ul class="menu__subsubmenu">
+
+                        <ul class="menu__subsubmenu" data-menu-id="subsubmenu-3">
                            <li class="menu__subsubitem">
                               <a href="" class="menu__link">Ссылка 1</a>
                            </li>
+
                            <li class="menu__subsubitem">
                               <a href="" class="menu__link">Ссылка 2</a>
                            </li>
+
                            <li class="menu__subsubitem">
                               <a href="" class="menu__link">Ссылка 3</a>
                            </li>
                         </ul>
+
                      </li>
 
-                     <li class="menu__subitem">
-                        <a href="" class="menu__link">Инспекция энергетических объектов</a>
-                     </li>
+
+                     <!-- Без subsubmenu -->
 
                      <li class="menu__subitem">
-                        <button type="button" class="menu__toggle">Аутсорсинг</button>
-                        <ul class="menu__subsubmenu">
+                        <a href="" class="menu__link">
+                           Инспекция энергетических объектов
+                        </a>
+                     </li>
+
+
+                     <!-- Аутсорсинг -->
+
+                     <li class="menu__subitem">
+
+                        <button type="button" class="menu__toggle" data-menu-target="subsubmenu-4">
+                           Аутсорсинг
+                        </button>
+
+                        <ul class="menu__subsubmenu" data-menu-id="subsubmenu-4">
                            <li class="menu__subsubitem">
                               <a href="" class="menu__link">Ссылка 1</a>
                            </li>
+
                            <li class="menu__subsubitem">
                               <a href="" class="menu__link">Ссылка 2</a>
                            </li>
+
                            <li class="menu__subsubitem">
                               <a href="" class="menu__link">Ссылка 3</a>
                            </li>
                         </ul>
+
+                     </li>
+
+
+                     <li class="menu__subitem">
+                        <a href="" class="menu__link">
+                           Лаборатория неразрушающего контроля
+                        </a>
                      </li>
 
                      <li class="menu__subitem">
-                        <a href="" class="menu__link">Лаборатория неразрушающего контроля</a>
+                        <a href="" class="menu__link">
+                           Лаборатория неразрушающего контроля
+                        </a>
                      </li>
+
+                     <li class="menu__subitem">
+                        <a href="" class="menu__link">
+                           Лаборатория неразрушающего контроля
+                        </a>
+                     </li>
+
                   </ul>
                </li>
 
+
+               <!-- Отрасли -->
+
                <li class="menu__item">
-                  <button type="button" class="menu__toggle">
+
+                  <button type="button" class="menu__toggle" data-menu-target="submenu-2">
                      Отрасли
+
                      <svg>
                         <use xlink:href="img/icons/icons.svg#icon-chevron-right"></use>
                      </svg>
                   </button>
-                  <ul class="menu__submenu">
+
+                  <ul class="menu__submenu" data-menu-id="submenu-2">
                      <li class="menu__subitem">
                         <a href="" class="menu__link">Ссылка 1</a>
                      </li>
+
                      <li class="menu__subitem">
                         <a href="" class="menu__link">Ссылка 2</a>
                      </li>
+
                      <li class="menu__subitem">
                         <a href="" class="menu__link">Ссылка 3</a>
                      </li>
+
                      <li class="menu__subitem">
                         <a href="" class="menu__link">Ссылка 4</a>
                      </li>
                   </ul>
+
                </li>
+
+
+               <!-- Остальные пункты -->
 
                <li class="menu__item">
                   <a href="" class="menu__link">Проекты</a>
@@ -265,7 +352,12 @@
                <li class="menu__item">
                   <a href="" class="menu__link">Контакты</a>
                </li>
+
             </ul>
+
+
+            <div class="menu__submenus"></div>
+            <div class="menu__subsubmenus"></div>
          </div>
 
          <div class="menu__button">
@@ -313,6 +405,12 @@
             <a href="tel:+74957906552" class="menu__contact">+7 (495) 790-65-52</a>
             <a href="mailto:inspection@eng-sv.ru" class="menu__contact">inspection@eng-sv.ru</a>
          </div>
+
+         <div class="separators">
+            <span class="separator separator-1"></span>
+            <span class="separator separator-2"></span>
+         </div>
+
          <div class="corners">
             <span class="corner corner-1"></span>
             <span class="corner corner-2"></span>
@@ -1030,12 +1128,21 @@
       </svg>
    </button>
 </div>
+
+<!-- cookies banner -->
+<div class="cookies">
+   <div class="cookies__text">Мы используем cookies, чтобы вам было удобнее пользоваться сайтом.</div>
+   <div class="cookies__buttons">
+      <button type="button" class="btn -outline"><span>Отклонить</span></button>
+      <button type="button" class="btn"><span>Принять</span></button>
+   </div>
+</div>
    
 
 
-   <script src="js/app.js?_v=20260918154516"></script>
-   <script src="js/send.js?_v=20260918154516"></script>
-   <script src="js/map.js?_v=20260918154516"></script>
+   <script src="js/app.js?_v=20260919085437"></script>
+   <script src="js/send.js?_v=20260919085437"></script>
+   <script src="js/map.js?_v=20260919085437"></script>
 </body>
 
 </html>
