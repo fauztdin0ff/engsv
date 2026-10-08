@@ -202,8 +202,13 @@ function validateForm(form) {
       if (!input) return;
 
       let warningImage = field.querySelector('.warning-image');
-      if (!input.value.trim()) {
 
+      const isCheckbox = input.type === 'checkbox';
+      const isEmpty = isCheckbox
+         ? !input.checked
+         : !input.value.trim();
+
+      if (isEmpty) {
          field.classList.add('warning');
          isValid = false;
 
@@ -214,7 +219,6 @@ function validateForm(form) {
             warningImage.alt = '';
             field.appendChild(warningImage);
          }
-
       } else {
          field.classList.remove('warning');
          warningImage?.remove();
